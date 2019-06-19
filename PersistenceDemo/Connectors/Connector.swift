@@ -6,14 +6,13 @@
 //  Copyright © 2019 Piotr Przeliorz. All rights reserved.
 //
 
-import UIKit
 import Dip
 
 internal class Connector {
 
     weak var navigationController: UINavigationController?
-    var childConnectors = [Connector]()
-    private let container: DependencyContainer
+    var childConnectors: [Connector] = []
+    let container: DependencyContainer
 
     required init(navigationController: UINavigationController?, container: DependencyContainer) {
         self.navigationController = navigationController
@@ -21,5 +20,11 @@ internal class Connector {
         setup(container: container)
     }
 
+    deinit {
+        print("Deinit of \(type(of: self))")
+    }
+
     func setup(container: DependencyContainer) { }
+
+    func start() { }
 }

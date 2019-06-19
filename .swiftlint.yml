@@ -1,0 +1,23 @@
+disabled_rules: # rule identifiers to exclude from running
+  - line_length
+  - trailing_whitespace
+  - variable_name
+  - force_cast
+  - force_try
+  - discarded_notification_center_observer
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+  - Pods
+  - .bundle
+  - vendor/bundle
+  - Generated/LocalizedStrings.swift
+
+force_cast: warning # implicitly
+force_try:
+  severity: warning # explicitly
+variable_name:
+  min_length: # only min_length
+    warning: 3 # only warning
+  excluded: # excluded via string array
+    - id
+    - URL

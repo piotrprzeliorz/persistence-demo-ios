@@ -1,5 +1,5 @@
 //
-//  DependencyContainerRegistrable.swift
+//  ContainerRegistrable.swift
 //  PersistenceDemo
 //
 //  Created by Piotr Przeliorz on 19/06/2019.
@@ -8,7 +8,7 @@
 
 import Dip
 
-protocol DependencyContainerRegistrable {
+protocol ContainerRegistrable {
 
     func register(in container: DependencyContainer)
 }

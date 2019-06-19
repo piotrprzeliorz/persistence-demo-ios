@@ -6,31 +6,27 @@
 //  Copyright © 2019 Piotr Przeliorz. All rights reserved.
 //
 
-import UIKit
 import Dip
 
-protocol RootConnectable: class {
-
-    init(window: UIWindow, container: DependencyContainer)
-
-}
-
-final class RootConnector: Connector, RootConnectable {
+final class RootConnector: Connector {
 
     convenience init(window: UIWindow, container: DependencyContainer) {
         let navigationController = UINavigationController()
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         self.init(navigationController: navigationController, container: container)
+        start()
     }
 
     override func setup(container: DependencyContainer) {
         super.setup(container: container)
-
+        container.add(registration: PostsConnectorReigstration())
     }
 
-    private func connectPosts() {
-
+    override func start() {
+        super.start()
+        let postsConnector = try! container.resolve(arguments: navigationController, container) as PostsConnector
+        childConnectors.append(postsConnector)
+        postsConnector.start()
     }
-
 }

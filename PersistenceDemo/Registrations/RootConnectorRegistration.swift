@@ -8,11 +8,11 @@
 
 import Dip
 
-struct RootConnectorRegistration: DependencyContainerRegistrable {
+struct RootConnectorRegistration: ContainerRegistrable {
 
     func register(in container: DependencyContainer) {
-        container.register(.weakSingleton) { (window: UIWindow, container: DependencyContainer) in
-            RootConnector(window: window, container: container) as RootConnectable
+        container.register{ (window: UIWindow, container: DependencyContainer) in
+            RootConnector(window: window, container: container) as RootConnector
         }
     }
 }

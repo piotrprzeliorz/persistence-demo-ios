@@ -8,12 +8,14 @@ PODS:
   - RxSwift (5.0.0)
   - RxTest (5.0.0):
     - RxSwift (~> 5)
+  - SwiftLint (0.33.0)
 
 DEPENDENCIES:
-  - Dip (~> 7)
+  - Dip (~> 7.0.1)
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
   - RxTest (~> 5)
+  - SwiftLint (~> 0.33.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -22,6 +24,7 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - RxTest
+    - SwiftLint
 
 SPEC CHECKSUMS:
   Dip: 79509d5dc4f648e10e922ed79c608a7761c52b13
@@ -29,7 +32,8 @@ SPEC CHECKSUMS:
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
   RxTest: 4349afe98f564e0a9bc19063368904622d17d49a
+  SwiftLint: fed9c66336e41fc74dc48a73678380718f0c8b0e
 
-PODFILE CHECKSUM: 5250d47311c4d0dc8c86c798e637f8a7dddb23d0
+PODFILE CHECKSUM: a145f3e23ed6182cd7bdabacaf5f588ade3a5a31
 
 COCOAPODS: 1.7.0

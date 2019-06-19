@@ -6,8 +6,22 @@
 //  Copyright © 2019 Piotr Przeliorz. All rights reserved.
 //
 
-import UIKit
+import Dip
 
-final class PostsConnector: Connector {
+protocol PostsConnectable {
+
+}
+
+final class PostsConnector: Connector, PostsConnectable {
+
+    override func setup(container: DependencyContainer) {
+        super.setup(container: container)
+        container.add(registration: PostsSceenRegistration())
+    }
+
+    override func start() {
+        let postsViewController = try! container.resolve() as PostsViewController
+        navigationController?.pushViewController(postsViewController, animated: true)
+    }
 
 }

@@ -6,17 +6,16 @@
 //  Copyright © 2019 Piotr Przeliorz. All rights reserved.
 //
 
-import UIKit
 import Dip
 
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    private var connector: RootConnector!
     private let container = DependencyContainer()
-    private var connector: RootConnectable!
 
+    // MARK: - App's life cycle
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         register()
@@ -24,13 +23,16 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+    // MARK: - Private
+
     private func register() {
         container.add(registration: RootConnectorRegistration())
     }
 
     private func setupRootConnector() {
-        window = UIWindow()
+        window = UIWindow(backgroundColor: .white)
         guard let `window` = window else { fatalError("Window is not initialized")}
-        connector = try! container.resolve(arguments: window, container) as RootConnectable
+        connector = try! container.resolve(arguments: window, container) as RootConnector
     }
 }
+
