@@ -1,0 +1,6 @@
+sources:
+  - ./PersistenceDemo
+templates:
+  - ./Templates
+output:
+  ./PersistenceDemo/Generated

@@ -3,9 +3,17 @@ use_frameworks!
 inhibit_all_warnings!
 
 def libraries
+
+  #Reactive
+
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
+
+  #DI
   pod 'Dip', '~> 7.0.1'
+
+  #Helpers
+
   pod 'SwiftLint', '~> 0.33.0'
 end
 

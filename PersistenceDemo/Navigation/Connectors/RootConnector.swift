@@ -25,8 +25,7 @@ final class RootConnector: Connector {
 
     override func start() {
         super.start()
-        let postsConnector = try! container.resolve(arguments: navigationController, container) as PostsConnector
-        childConnectors.append(postsConnector)
-        postsConnector.start()
+        childConnector = try! container.resolve(arguments: navigationController, container) as PostsConnector
+        childConnector?.start()
     }
 }

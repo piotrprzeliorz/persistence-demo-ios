@@ -11,7 +11,7 @@ import Dip
 internal class Connector {
 
     weak var navigationController: UINavigationController?
-    var childConnectors: [Connector] = []
+    var childConnector: Connector?
     let container: DependencyContainer
 
     required init(navigationController: UINavigationController?, container: DependencyContainer) {

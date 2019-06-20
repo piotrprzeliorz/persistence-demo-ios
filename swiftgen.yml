@@ -3,7 +3,7 @@ strings:
   inputs: PersistenceDemo/Resources/Translations/en.lproj/Localizable.strings
   outputs:
     templateName: peter-strings-template
-    output: Generated/LocalizedStrings.swift
+    output: ./PersistenceDemo/Generated/LocalizedStrings.swift
     params:
         enumName: Localizable
 

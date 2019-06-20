@@ -11,18 +11,17 @@ import UIKit
 final class PostsViewController: UIViewController {
 
     private let viewModel: PostsViewModelProtocol
+    private let tableView: UITableView
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        navigationController?.navigationBar.prefersLargeTitles = true
-
-        title = Localizable.dupaSd("sdfdsf")
+        setupNavigationBar()
+        layoutTableView()
     }
-
 
     init(viewModel: PostsViewModelProtocol) {
         self.viewModel = viewModel
+        self.tableView = UITableView(frame: .zero)
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -30,5 +29,13 @@ final class PostsViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
+    private func setupNavigationBar() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.title = Localizable.posts
+    }
 
+    private func layoutTableView() {
+        view.addSubview(tableView)
+        tableView.edges(toMarginOf: view)
+    }
 }

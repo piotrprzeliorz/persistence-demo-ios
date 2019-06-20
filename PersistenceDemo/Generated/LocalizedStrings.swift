@@ -3,6 +3,8 @@
 import Foundation
 
 internal enum Localizable {
+  /// Posts
+  internal static let posts = Localizable.tr("posts")
 
   private static func tr(_ key: String, _ args: CVarArg...) -> String {
     let format = NSLocalizedString(key, comment: "")

@@ -14,6 +14,14 @@ struct PostsSceenRegistration: ContainerRegistrable {
 
         let viewModel = PostsViewModel()
 
+
+
+
+
+
+
+        
+
         container.register() { _ in
             PostsViewController(viewModel: viewModel)
         }
