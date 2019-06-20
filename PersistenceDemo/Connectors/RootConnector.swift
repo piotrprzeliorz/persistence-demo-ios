@@ -20,7 +20,7 @@ final class RootConnector: Connector {
 
     override func setup(container: DependencyContainer) {
         super.setup(container: container)
-        container.add(registration: PostsConnectorReigstration())
+        container.apply(registration: PostsConnectorReigstration())
     }
 
     override func start() {

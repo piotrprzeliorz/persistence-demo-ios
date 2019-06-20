@@ -26,7 +26,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Private
 
     private func register() {
-        container.add(registration: RootConnectorRegistration())
+        container.apply(registration: RootConnectorRegistration())
     }
 
     private func setupRootConnector() {

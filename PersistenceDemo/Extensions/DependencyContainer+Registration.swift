@@ -10,7 +10,7 @@ import Dip
 
 extension DependencyContainer {
 
-    func add(registration: ContainerRegistrable) {
+    func apply(registration: ContainerRegistrable) {
         registration.register(in: self)
     }
 }
