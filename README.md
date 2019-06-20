@@ -12,7 +12,7 @@ Project created as demo app for a tech company.
 
 ### Architecture
 
-The application based on MVVM + C architecture. Both data provides (remote and local) implements same interface. 
+The application based on MVVM + C architecture. 
 
 <p align="center">
 <img width="100%" src="/Images/architecture.png">

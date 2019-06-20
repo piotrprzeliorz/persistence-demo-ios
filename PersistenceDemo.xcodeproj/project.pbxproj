@@ -103,6 +103,20 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		5D068ABA22BB9BAE004E1D31 /* PostsDataSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PostsDataSource;
+			sourceTree = "<group>";
+		};
+		5D068ABB22BB9F73004E1D31 /* PostsRepository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PostsRepository;
+			sourceTree = "<group>";
+		};
 		5D938E7422BA2FBA005A1D94 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +142,7 @@
 				5D938EAA22BB937C005A1D94 /* Registrations */,
 				5D938EAB22BB93A4005A1D94 /* ViewController */,
 				5D938EAC22BB9402005A1D94 /* ViewModel */,
+				5D068ABB22BB9F73004E1D31 /* PostsRepository */,
 			);
 			path = Posts;
 			sourceTree = "<group>";
@@ -249,6 +264,7 @@
 		5DE7254A22BA150000E151A8 /* PersistenceDemo */ = {
 			isa = PBXGroup;
 			children = (
+				5D068ABA22BB9BAE004E1D31 /* PostsDataSource */,
 				5DE7256D22BA22C200E151A8 /* Navigation */,
 				5D938E8222BA54F4005A1D94 /* Posts */,
 				5D938E7B22BA4745005A1D94 /* Protocols */,
