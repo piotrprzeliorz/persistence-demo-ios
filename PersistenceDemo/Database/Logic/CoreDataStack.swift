@@ -29,8 +29,9 @@ final class CoreDataStack: Database {
     }
 
     private func setup() {
-        backgorundContext.automaticallyMergesChangesFromParent = true
-        context.automaticallyMergesChangesFromParent = true
+        Mirror(reflecting: self).children
+            .compactMap { $0.value as? NSManagedObjectContext }
+            .forEach { $0?.automaticallyMergesChangesFromParent = true }
         backgorundContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         context.mergePolicy = NSMergeByPropertyStoreTrumpMergePolicy
     }

@@ -30,8 +30,6 @@ enum PersistenceDemoError: Error {
     }
 }
 
-// MARK: - LocalizedError
-
 extension PersistenceDemoError: LocalizedError {
 
     public var errorDescription: String? {

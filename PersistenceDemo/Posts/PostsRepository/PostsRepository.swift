@@ -24,10 +24,8 @@ final class PostsRepository: PostsRepositoryProtocol {
         self.localDataSource = localDataSource
     }
 
-
     func fetch() -> Single<[Post]> {
         return remoteDataSource.fetch()
     }
 
-    
 }
