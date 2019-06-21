@@ -16,6 +16,7 @@ final class PostsConnector: Connector, PostsConnectable {
 
     override func setup(container: DependencyContainer) {
         super.setup(container: container)
+        container.apply(registration: NetworkingRegistration())
         container.apply(registration: PostsSceenRegistration())
     }
 

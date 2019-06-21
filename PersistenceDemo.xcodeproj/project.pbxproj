@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		5D068AB822BB964D004E1D31 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D068AB722BB964D004E1D31 /* UIView+Constraints.swift */; };
+		5D068ABD22BBA029004E1D31 /* PostsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D068ABC22BBA029004E1D31 /* PostsRepository.swift */; };
+		5D068AC122BBA0AD004E1D31 /* PostsRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D068AC022BBA0AD004E1D31 /* PostsRemoteDataSource.swift */; };
+		5D54DE2122BCE49D00ADE9CB /* PersistenceDemoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D54DE2022BCE49D00ADE9CB /* PersistenceDemoError.swift */; };
+		5D54DE2622BCEBF300ADE9CB /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D54DE2522BCEBF300ADE9CB /* Resource.swift */; };
+		5D54DE2822BCEC1500ADE9CB /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D54DE2722BCEC1500ADE9CB /* Result.swift */; };
+		5D54DE2A22BCED4500ADE9CB /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D54DE2922BCED4500ADE9CB /* Networking.swift */; };
+		5D54DE2C22BCF00300ADE9CB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D54DE2B22BCF00300ADE9CB /* Constants.swift */; };
+		5D54DE2F22BD036700ADE9CB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D54DE2E22BD036700ADE9CB /* Post.swift */; };
+		5D54DE3122BD04B900ADE9CB /* ServerEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D54DE3022BD04B900ADE9CB /* ServerEndpoint.swift */; };
+		5D54DE3622BD0B2000ADE9CB /* NetworkingRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D54DE3522BD0B2000ADE9CB /* NetworkingRegistration.swift */; };
+		5D54DE3A22BD0FC600ADE9CB /* PostsRepositoryRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D54DE3922BD0FC600ADE9CB /* PostsRepositoryRegistration.swift */; };
+		5D54DE3C22BD113F00ADE9CB /* PostsLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D54DE3B22BD113F00ADE9CB /* PostsLocalDataSource.swift */; };
 		5D938E6E22BA2746005A1D94 /* RootConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D938E6D22BA2746005A1D94 /* RootConnector.swift */; };
 		5D938E7122BA2F1F005A1D94 /* ContainerRegistrable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D938E7022BA2F1F005A1D94 /* ContainerRegistrable.swift */; };
 		5D938E7322BA2F57005A1D94 /* RootConnectorRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D938E7222BA2F57005A1D94 /* RootConnectorRegistration.swift */; };
@@ -44,6 +56,18 @@
 /* Begin PBXFileReference section */
 		38B3B1BFB6DEB2E385053A60 /* Pods-PersistenceDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersistenceDemoTests.release.xcconfig"; path = "Target Support Files/Pods-PersistenceDemoTests/Pods-PersistenceDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		5D068AB722BB964D004E1D31 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		5D068ABC22BBA029004E1D31 /* PostsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsRepository.swift; sourceTree = "<group>"; };
+		5D068AC022BBA0AD004E1D31 /* PostsRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsRemoteDataSource.swift; sourceTree = "<group>"; };
+		5D54DE2022BCE49D00ADE9CB /* PersistenceDemoError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceDemoError.swift; sourceTree = "<group>"; };
+		5D54DE2522BCEBF300ADE9CB /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		5D54DE2722BCEC1500ADE9CB /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		5D54DE2922BCED4500ADE9CB /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		5D54DE2B22BCF00300ADE9CB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5D54DE2E22BD036700ADE9CB /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		5D54DE3022BD04B900ADE9CB /* ServerEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerEndpoint.swift; sourceTree = "<group>"; };
+		5D54DE3522BD0B2000ADE9CB /* NetworkingRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingRegistration.swift; sourceTree = "<group>"; };
+		5D54DE3922BD0FC600ADE9CB /* PostsRepositoryRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsRepositoryRegistration.swift; sourceTree = "<group>"; };
+		5D54DE3B22BD113F00ADE9CB /* PostsLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsLocalDataSource.swift; sourceTree = "<group>"; };
 		5D938E6D22BA2746005A1D94 /* RootConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootConnector.swift; sourceTree = "<group>"; };
 		5D938E7022BA2F1F005A1D94 /* ContainerRegistrable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerRegistrable.swift; sourceTree = "<group>"; };
 		5D938E7222BA2F57005A1D94 /* RootConnectorRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootConnectorRegistration.swift; sourceTree = "<group>"; };
@@ -97,24 +121,87 @@
 		5D068AB622BB958D004E1D31 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				5D54DE2B22BCF00300ADE9CB /* Constants.swift */,
 				5DE7254B22BA150000E151A8 /* AppDelegate.swift */,
 				5DE7255722BA150100E151A8 /* Info.plist */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		5D068ABA22BB9BAE004E1D31 /* PostsDataSource */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PostsDataSource;
-			sourceTree = "<group>";
-		};
 		5D068ABB22BB9F73004E1D31 /* PostsRepository */ = {
 			isa = PBXGroup;
 			children = (
+				5D068ABC22BBA029004E1D31 /* PostsRepository.swift */,
 			);
 			path = PostsRepository;
+			sourceTree = "<group>";
+		};
+		5D068ABE22BBA03D004E1D31 /* PostsRemoteDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				5D068AC022BBA0AD004E1D31 /* PostsRemoteDataSource.swift */,
+			);
+			path = PostsRemoteDataSource;
+			sourceTree = "<group>";
+		};
+		5D068ABF22BBA067004E1D31 /* PostsLocalDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				5D54DE3B22BD113F00ADE9CB /* PostsLocalDataSource.swift */,
+			);
+			path = PostsLocalDataSource;
+			sourceTree = "<group>";
+		};
+		5D54DE1F22BCE48600ADE9CB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5D54DE2022BCE49D00ADE9CB /* PersistenceDemoError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5D54DE2222BCEA3100ADE9CB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				5D54DE3222BD09F100ADE9CB /* Registration */,
+				5D54DE3322BD09FC00ADE9CB /* Model */,
+				5D54DE3422BD0A2000ADE9CB /* Logic */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		5D54DE2D22BD035800ADE9CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5D54DE2E22BD036700ADE9CB /* Post.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5D54DE3222BD09F100ADE9CB /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				5D54DE3522BD0B2000ADE9CB /* NetworkingRegistration.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		5D54DE3322BD09FC00ADE9CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5D54DE2722BCEC1500ADE9CB /* Result.swift */,
+				5D54DE3022BD04B900ADE9CB /* ServerEndpoint.swift */,
+				5D54DE2522BCEBF300ADE9CB /* Resource.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5D54DE3422BD0A2000ADE9CB /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				5D54DE2922BCED4500ADE9CB /* Networking.swift */,
+			);
+			path = Logic;
 			sourceTree = "<group>";
 		};
 		5D938E7422BA2FBA005A1D94 /* Extensions */ = {
@@ -143,6 +230,9 @@
 				5D938EAB22BB93A4005A1D94 /* ViewController */,
 				5D938EAC22BB9402005A1D94 /* ViewModel */,
 				5D068ABB22BB9F73004E1D31 /* PostsRepository */,
+				5D068ABE22BBA03D004E1D31 /* PostsRemoteDataSource */,
+				5D068ABF22BBA067004E1D31 /* PostsLocalDataSource */,
+				5D54DE2D22BD035800ADE9CB /* Model */,
 			);
 			path = Posts;
 			sourceTree = "<group>";
@@ -221,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				5D938E8022BA5362005A1D94 /* PostsSceenRegistration.swift */,
+				5D54DE3922BD0FC600ADE9CB /* PostsRepositoryRegistration.swift */,
 			);
 			path = Registrations;
 			sourceTree = "<group>";
@@ -264,9 +355,10 @@
 		5DE7254A22BA150000E151A8 /* PersistenceDemo */ = {
 			isa = PBXGroup;
 			children = (
-				5D068ABA22BB9BAE004E1D31 /* PostsDataSource */,
 				5DE7256D22BA22C200E151A8 /* Navigation */,
 				5D938E8222BA54F4005A1D94 /* Posts */,
+				5D54DE2222BCEA3100ADE9CB /* Networking */,
+				5D54DE1F22BCE48600ADE9CB /* Models */,
 				5D938E7B22BA4745005A1D94 /* Protocols */,
 				5D938EA222BB8BCB005A1D94 /* Generated */,
 				5D938E7422BA2FBA005A1D94 /* Extensions */,
@@ -328,6 +420,7 @@
 				7F82B59FD4A560E1049C6CC8 /* [CP] Embed Pods Frameworks */,
 				5D938E9E22BAA6FF005A1D94 /* SwiftGen */,
 				5D068AB922BB9998004E1D31 /* Sourcery */,
+				5D54DE3822BD0CB000ADE9CB /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -452,6 +545,24 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftgen >/dev/null; then\nsourcery\nelse\necho \"warning: Sourcery not installed, download it from https://github.com/krzysztofzablocki/Sourcery\"\nfi\n";
 		};
+		5D54DE3822BD0CB000ADE9CB /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		5D938E9E22BAA6FF005A1D94 /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -541,19 +652,31 @@
 				5D938EA122BB8905005A1D94 /* AutoEquatable.swift in Sources */,
 				5DE7256F22BA22F500E151A8 /* Connector.swift in Sources */,
 				5D938E8122BA5362005A1D94 /* PostsSceenRegistration.swift in Sources */,
+				5D54DE3122BD04B900ADE9CB /* ServerEndpoint.swift in Sources */,
 				5D938E7122BA2F1F005A1D94 /* ContainerRegistrable.swift in Sources */,
+				5D068AC122BBA0AD004E1D31 /* PostsRemoteDataSource.swift in Sources */,
 				5D938EA522BB8BCB005A1D94 /* LocalizedStrings.swift in Sources */,
+				5D54DE3A22BD0FC600ADE9CB /* PostsRepositoryRegistration.swift in Sources */,
+				5D54DE2622BCEBF300ADE9CB /* Resource.swift in Sources */,
+				5D54DE2A22BCED4500ADE9CB /* Networking.swift in Sources */,
 				5D938E6E22BA2746005A1D94 /* RootConnector.swift in Sources */,
+				5D54DE2F22BD036700ADE9CB /* Post.swift in Sources */,
 				5D938E8422BA56FA005A1D94 /* UIWindow+Init.swift in Sources */,
+				5D54DE2822BCEC1500ADE9CB /* Result.swift in Sources */,
 				5D938E7A22BA4109005A1D94 /* PostsConnectorReigstration.swift in Sources */,
+				5D54DE3622BD0B2000ADE9CB /* NetworkingRegistration.swift in Sources */,
 				5D938E7D22BA4C29005A1D94 /* PostsViewController.swift in Sources */,
 				5D938E7822BA3F95005A1D94 /* PostsConnector.swift in Sources */,
 				5D938E7622BA2FC7005A1D94 /* DependencyContainer+Registration.swift in Sources */,
+				5D54DE2122BCE49D00ADE9CB /* PersistenceDemoError.swift in Sources */,
 				5D938E7F22BA50BE005A1D94 /* PostsViewModel.swift in Sources */,
 				5D938E7322BA2F57005A1D94 /* RootConnectorRegistration.swift in Sources */,
 				5D938EA622BB8BCB005A1D94 /* Equality.generated.swift in Sources */,
 				5DE7254C22BA150000E151A8 /* AppDelegate.swift in Sources */,
+				5D54DE3C22BD113F00ADE9CB /* PostsLocalDataSource.swift in Sources */,
 				5D068AB822BB964D004E1D31 /* UIView+Constraints.swift in Sources */,
+				5D068ABD22BBA029004E1D31 /* PostsRepository.swift in Sources */,
+				5D54DE2C22BCF00300ADE9CB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

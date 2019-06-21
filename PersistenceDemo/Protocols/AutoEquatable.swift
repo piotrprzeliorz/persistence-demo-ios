@@ -9,4 +9,3 @@
 import Foundation
 
 protocol AutoEquatable { }
-

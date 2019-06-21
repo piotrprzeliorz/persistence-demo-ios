@@ -2,7 +2,7 @@ platform :ios, '10.0'
 use_frameworks!
 inhibit_all_warnings!
 
-def libraries
+def main_libraries
 
   #Reactive
 
@@ -22,10 +22,10 @@ def test_libraries
 end
 
 target 'PersistenceDemo' do
-  libraries
+  main_libraries
 end
 
 target 'PersistenceDemoTests' do
   test_libraries
-  libraries
+  main_libraries
 end

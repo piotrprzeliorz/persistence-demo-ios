@@ -15,4 +15,3 @@ extension UIWindow {
         self.backgroundColor = backgroundColor
     }
 }
-

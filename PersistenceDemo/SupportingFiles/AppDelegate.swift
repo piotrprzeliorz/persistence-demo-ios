@@ -35,4 +35,3 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         connector = try! container.resolve(arguments: window, container) as RootConnector
     }
 }
-

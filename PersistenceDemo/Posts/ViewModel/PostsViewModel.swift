@@ -6,7 +6,8 @@
 //  Copyright © 2019 Piotr Przeliorz. All rights reserved.
 //
 
-import UIKit
+import RxSwift
+import RxCocoa
 
 protocol PostsViewModelProtocol {
 
