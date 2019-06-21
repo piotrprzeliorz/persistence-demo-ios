@@ -13,4 +13,8 @@ struct Constants {
     enum Server {
         static let url = URL(string: "https://jsonplaceholder.typicode.com")!
     }
+
+    enum Database {
+        static let name = "PersistenceDemoModel"
+    }
 }
