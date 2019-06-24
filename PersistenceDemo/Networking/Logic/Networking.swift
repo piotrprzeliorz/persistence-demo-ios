@@ -11,7 +11,7 @@ import RxSwift
 protocol Networking {
 
     init(urlSession: URLSession)
-    func load<A>(_ resource: Resource<A>) -> Single<A>
+    func load<T>(_ resource: Resource<T>) -> Single<T>
 }
 
 final class NetworkingService: Networking {
@@ -22,7 +22,7 @@ final class NetworkingService: Networking {
         self.urlSession = urlSession
     }
 
-    func load<A>(_ resource: Resource<A>) -> Single<A> {
+    func load<T>(_ resource: Resource<T>) -> Single<T> {
         return Single.create(subscribe: { (single) -> Disposable in
             let task = self.urlSession.dataTask(with: resource.urlRequest) { data, _, error in
                 if let error = error {

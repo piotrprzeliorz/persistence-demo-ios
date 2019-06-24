@@ -8,12 +8,12 @@
 
 import RxSwift
 
-protocol PostsDataSource {
+protocol PostsRemoteDataSourceProtocol {
 
     func fetch() -> Single<[Post]>
 }
 
-final class PostsRemoteDataSource: PostsDataSource {
+final class PostsRemoteDataSource: PostsRemoteDataSourceProtocol {
 
     private let networking: Networking
 
@@ -22,7 +22,10 @@ final class PostsRemoteDataSource: PostsDataSource {
     }
 
     func fetch() -> Single<[Post]> {
-        let resource = Resource<[Post]>(get: .posts)
+        let resource = Resource<[RemotePost]>(get: .posts)
         return networking.load(resource)
+            .map { posts in
+                posts.map { $0.convert() }
+        }
     }
 }

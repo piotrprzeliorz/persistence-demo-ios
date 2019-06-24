@@ -11,10 +11,10 @@ import Dip
 struct PostsSceenRegistration: ContainerRegistrable {
 
     func register(in container: DependencyContainer) {
-        container.register { PostsViewModel() }
+        container.register { PostsViewModel(postsRepository: try! container.resolve() as PostsRepositoryProtocol) as PostsViewModelProtocol }
         
         container.register { _ -> PostsViewController in
-            let viewModel = try! container.resolve() as PostsViewModel
+            let viewModel = try! container.resolve() as PostsViewModelProtocol
             return PostsViewController(viewModel: viewModel)
         }
     }

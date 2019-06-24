@@ -10,9 +10,13 @@
 		5D068AB822BB964D004E1D31 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D068AB722BB964D004E1D31 /* UIView+Constraints.swift */; };
 		5D068ABD22BBA029004E1D31 /* PostsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D068ABC22BBA029004E1D31 /* PostsRepository.swift */; };
 		5D068AC122BBA0AD004E1D31 /* PostsRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D068AC022BBA0AD004E1D31 /* PostsRemoteDataSource.swift */; };
+		5D13D6AE22C0BF1700A24D5D /* PostEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D13D6AD22C0BF1700A24D5D /* PostEntity.swift */; };
+		5D13D6B122C0D4B700A24D5D /* CDManagable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D13D6B022C0D4B700A24D5D /* CDManagable.swift */; };
+		5D13D6B322C0E0D000A24D5D /* NSManagedObjectContext+Insert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D13D6B222C0E0D000A24D5D /* NSManagedObjectContext+Insert.swift */; };
+		5D13D6B522C0EC3E00A24D5D /* RemotePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D13D6B422C0EC3E00A24D5D /* RemotePost.swift */; };
+		5D13D6B722C0EF0500A24D5D /* Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D13D6B622C0EF0500A24D5D /* Convertible.swift */; };
 		5D54DE2122BCE49D00ADE9CB /* PersistenceDemoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D54DE2022BCE49D00ADE9CB /* PersistenceDemoError.swift */; };
 		5D54DE2622BCEBF300ADE9CB /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D54DE2522BCEBF300ADE9CB /* Resource.swift */; };
-		5D54DE2822BCEC1500ADE9CB /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D54DE2722BCEC1500ADE9CB /* Result.swift */; };
 		5D54DE2A22BCED4500ADE9CB /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D54DE2922BCED4500ADE9CB /* Networking.swift */; };
 		5D54DE2C22BCF00300ADE9CB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D54DE2B22BCF00300ADE9CB /* Constants.swift */; };
 		5D54DE2F22BD036700ADE9CB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D54DE2E22BD036700ADE9CB /* Post.swift */; };
@@ -38,6 +42,8 @@
 		5D938EA122BB8905005A1D94 /* AutoEquatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D938EA022BB8905005A1D94 /* AutoEquatable.swift */; };
 		5D938EA522BB8BCB005A1D94 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D938EA322BB8BCB005A1D94 /* LocalizedStrings.swift */; };
 		5D938EA622BB8BCB005A1D94 /* Equality.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D938EA422BB8BCB005A1D94 /* Equality.generated.swift */; };
+		5DC4086C22C14D5D002EFEB9 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC4086B22C14D5D002EFEB9 /* Result.swift */; };
+		5DC4086E22C15434002EFEB9 /* safsdad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC4086D22C15434002EFEB9 /* safsdad.swift */; };
 		5DE7254C22BA150000E151A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE7254B22BA150000E151A8 /* AppDelegate.swift */; };
 		5DE7255322BA150100E151A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DE7255222BA150100E151A8 /* Assets.xcassets */; };
 		5DE7256122BA150100E151A8 /* PersistenceDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE7256022BA150100E151A8 /* PersistenceDemoTests.swift */; };
@@ -62,9 +68,13 @@
 		5D068AB722BB964D004E1D31 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		5D068ABC22BBA029004E1D31 /* PostsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsRepository.swift; sourceTree = "<group>"; };
 		5D068AC022BBA0AD004E1D31 /* PostsRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsRemoteDataSource.swift; sourceTree = "<group>"; };
+		5D13D6AD22C0BF1700A24D5D /* PostEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEntity.swift; sourceTree = "<group>"; };
+		5D13D6B022C0D4B700A24D5D /* CDManagable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDManagable.swift; sourceTree = "<group>"; };
+		5D13D6B222C0E0D000A24D5D /* NSManagedObjectContext+Insert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Insert.swift"; sourceTree = "<group>"; };
+		5D13D6B422C0EC3E00A24D5D /* RemotePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemotePost.swift; sourceTree = "<group>"; };
+		5D13D6B622C0EF0500A24D5D /* Convertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Convertible.swift; sourceTree = "<group>"; };
 		5D54DE2022BCE49D00ADE9CB /* PersistenceDemoError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceDemoError.swift; sourceTree = "<group>"; };
 		5D54DE2522BCEBF300ADE9CB /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
-		5D54DE2722BCEC1500ADE9CB /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		5D54DE2922BCED4500ADE9CB /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		5D54DE2B22BCF00300ADE9CB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5D54DE2E22BD036700ADE9CB /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -90,6 +100,8 @@
 		5D938EA022BB8905005A1D94 /* AutoEquatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoEquatable.swift; sourceTree = "<group>"; };
 		5D938EA322BB8BCB005A1D94 /* LocalizedStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
 		5D938EA422BB8BCB005A1D94 /* Equality.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Equality.generated.swift; sourceTree = "<group>"; };
+		5DC4086B22C14D5D002EFEB9 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		5DC4086D22C15434002EFEB9 /* safsdad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = safsdad.swift; sourceTree = "<group>"; };
 		5DE7254822BA150000E151A8 /* PersistenceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersistenceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DE7254B22BA150000E151A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DE7255222BA150100E151A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -160,10 +172,19 @@
 			path = PostsLocalDataSource;
 			sourceTree = "<group>";
 		};
+		5D13D6AF22C0D11A00A24D5D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5D13D6AD22C0BF1700A24D5D /* PostEntity.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		5D54DE1F22BCE48600ADE9CB /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				5D54DE2022BCE49D00ADE9CB /* PersistenceDemoError.swift */,
+				5DC4086B22C14D5D002EFEB9 /* Result.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -197,9 +218,9 @@
 		5D54DE3322BD09FC00ADE9CB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5D54DE2722BCEC1500ADE9CB /* Result.swift */,
-				5D54DE3022BD04B900ADE9CB /* ServerEndpoint.swift */,
 				5D54DE2522BCEBF300ADE9CB /* Resource.swift */,
+				5D54DE3022BD04B900ADE9CB /* ServerEndpoint.swift */,
+				5D13D6B422C0EC3E00A24D5D /* RemotePost.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -215,10 +236,11 @@
 		5D54DE3D22BD183F00ADE9CB /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				5D13D6AF22C0D11A00A24D5D /* Models */,
 				5D54DE4722BD1E1D00ADE9CB /* PersistenceDemoModel.xcdatamodeld */,
 				5D54DE4422BD1C7E00ADE9CB /* Registration */,
-				5D54DE4322BD1A6500ADE9CB /* Logic */,
 				5D54DE4022BD1A0B00ADE9CB /* Protocols */,
+				5D54DE4322BD1A6500ADE9CB /* Logic */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -227,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				5D54DE4122BD1A1C00ADE9CB /* Database.swift */,
+				5D13D6B022C0D4B700A24D5D /* CDManagable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -253,6 +276,8 @@
 				5D938E7522BA2FC7005A1D94 /* DependencyContainer+Registration.swift */,
 				5D938E8322BA56FA005A1D94 /* UIWindow+Init.swift */,
 				5D068AB722BB964D004E1D31 /* UIView+Constraints.swift */,
+				5D13D6B222C0E0D000A24D5D /* NSManagedObjectContext+Insert.swift */,
+				5DC4086D22C15434002EFEB9 /* safsdad.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -262,6 +287,7 @@
 			children = (
 				5D938E7022BA2F1F005A1D94 /* ContainerRegistrable.swift */,
 				5D938EA022BB8905005A1D94 /* AutoEquatable.swift */,
+				5D13D6B622C0EF0500A24D5D /* Convertible.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -701,24 +727,30 @@
 				5D938E7122BA2F1F005A1D94 /* ContainerRegistrable.swift in Sources */,
 				5D068AC122BBA0AD004E1D31 /* PostsRemoteDataSource.swift in Sources */,
 				5D938EA522BB8BCB005A1D94 /* LocalizedStrings.swift in Sources */,
+				5DC4086E22C15434002EFEB9 /* safsdad.swift in Sources */,
 				5D54DE3A22BD0FC600ADE9CB /* PostsRepositoryRegistration.swift in Sources */,
+				5DC4086C22C14D5D002EFEB9 /* Result.swift in Sources */,
 				5D54DE2622BCEBF300ADE9CB /* Resource.swift in Sources */,
 				5D54DE2A22BCED4500ADE9CB /* Networking.swift in Sources */,
+				5D13D6AE22C0BF1700A24D5D /* PostEntity.swift in Sources */,
 				5D938E6E22BA2746005A1D94 /* RootConnector.swift in Sources */,
 				5D54DE2F22BD036700ADE9CB /* Post.swift in Sources */,
 				5D938E8422BA56FA005A1D94 /* UIWindow+Init.swift in Sources */,
-				5D54DE2822BCEC1500ADE9CB /* Result.swift in Sources */,
+				5D13D6B322C0E0D000A24D5D /* NSManagedObjectContext+Insert.swift in Sources */,
 				5D938E7A22BA4109005A1D94 /* PostsConnectorReigstration.swift in Sources */,
 				5D54DE3622BD0B2000ADE9CB /* NetworkingRegistration.swift in Sources */,
+				5D13D6B522C0EC3E00A24D5D /* RemotePost.swift in Sources */,
 				5D938E7D22BA4C29005A1D94 /* PostsViewController.swift in Sources */,
 				5D938E7822BA3F95005A1D94 /* PostsConnector.swift in Sources */,
 				5D54DE4222BD1A1C00ADE9CB /* Database.swift in Sources */,
 				5D938E7622BA2FC7005A1D94 /* DependencyContainer+Registration.swift in Sources */,
 				5D54DE2122BCE49D00ADE9CB /* PersistenceDemoError.swift in Sources */,
+				5D13D6B122C0D4B700A24D5D /* CDManagable.swift in Sources */,
 				5D938E7F22BA50BE005A1D94 /* PostsViewModel.swift in Sources */,
 				5D938E7322BA2F57005A1D94 /* RootConnectorRegistration.swift in Sources */,
 				5D938EA622BB8BCB005A1D94 /* Equality.generated.swift in Sources */,
 				5DE7254C22BA150000E151A8 /* AppDelegate.swift in Sources */,
+				5D13D6B722C0EF0500A24D5D /* Convertible.swift in Sources */,
 				5D54DE3C22BD113F00ADE9CB /* PostsLocalDataSource.swift in Sources */,
 				5D068AB822BB964D004E1D31 /* UIView+Constraints.swift in Sources */,
 				5D54DE4922BD1E1D00ADE9CB /* PersistenceDemoModel.xcdatamodeld in Sources */,
@@ -880,6 +912,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZMFMZR7T85;
 				INFOPLIST_FILE = "$(SRCROOT)/PersistenceDemo/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -898,6 +931,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZMFMZR7T85;
 				INFOPLIST_FILE = "$(SRCROOT)/PersistenceDemo/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

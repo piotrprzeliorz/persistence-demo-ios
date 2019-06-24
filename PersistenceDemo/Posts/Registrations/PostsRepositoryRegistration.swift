@@ -12,8 +12,12 @@ struct PostsRepositoryRegistration: ContainerRegistrable {
 
     func register(in container: DependencyContainer) {
 
-        container.register() {
-            return PostsRemoteDataSource(networking: try! container.resolve() as Networking)
+        container.register { PostsLocalDataSource(database: try! container.resolve() as Database) as PostsLocalDataSourceProtocol }
+
+        container.register { PostsRemoteDataSource(networking: try! container.resolve() as Networking) as PostsRemoteDataSourceProtocol }
+
+        container.register {
+            PostsRepository(remoteDataSource: try! container.resolve() as PostsRemoteDataSourceProtocol, localDataSource: try! container.resolve() as PostsLocalDataSourceProtocol) as PostsRepositoryProtocol
         }
     }
 }

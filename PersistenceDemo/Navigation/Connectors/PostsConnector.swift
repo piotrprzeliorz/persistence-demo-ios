@@ -18,6 +18,7 @@ final class PostsConnector: Connector, PostsConnectable {
         super.setup(container: container)
         container.apply(registration: DatabaseRegistration())
         container.apply(registration: NetworkingRegistration())
+        container.apply(registration: PostsRepositoryRegistration())
         container.apply(registration: PostsSceenRegistration())
     }
 

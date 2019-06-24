@@ -7,12 +7,13 @@
 //
 
 import Dip
+import Foundation
 
 struct NetworkingRegistration: ContainerRegistrable {
 
     func register(in container: DependencyContainer) {
-        container.register(.singleton) { (session: URLSession) in
-            NetworkingService(urlSession: session)
+        container.register(.singleton) {
+            NetworkingService(urlSession: URLSession.shared) as Networking
         }
     }
 }

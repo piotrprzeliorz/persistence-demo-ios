@@ -1,4 +1,5 @@
 PODS:
+  - DBDebugToolkit (0.5.0)
   - Dip (7.0.1)
   - RxCocoa (5.0.0):
     - RxRelay (~> 5)
@@ -11,6 +12,7 @@ PODS:
   - SwiftLint (0.33.0)
 
 DEPENDENCIES:
+  - DBDebugToolkit
   - Dip (~> 7.0.1)
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
@@ -19,6 +21,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - DBDebugToolkit
     - Dip
     - RxCocoa
     - RxRelay
@@ -27,6 +30,7 @@ SPEC REPOS:
     - SwiftLint
 
 SPEC CHECKSUMS:
+  DBDebugToolkit: c04bb6f618051d3de447a4b4323f37826116cfed
   Dip: 79509d5dc4f648e10e922ed79c608a7761c52b13
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
@@ -34,6 +38,6 @@ SPEC CHECKSUMS:
   RxTest: 4349afe98f564e0a9bc19063368904622d17d49a
   SwiftLint: fed9c66336e41fc74dc48a73678380718f0c8b0e
 
-PODFILE CHECKSUM: a145f3e23ed6182cd7bdabacaf5f588ade3a5a31
+PODFILE CHECKSUM: 1e769dc9a6717f213bc20f889a322374f0a9bd6e
 
 COCOAPODS: 1.7.0

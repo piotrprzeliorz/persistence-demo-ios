@@ -7,10 +7,29 @@
 //
 
 import RxSwift
+import CoreData
 
-final class PostsLocalDataSource: PostsDataSource {
+protocol PostsLocalDataSourceProtocol {
+
+    func fetch() -> Single<[Post]>
+    func save(posts: [Post]) -> Single<Void>
+
+}
+
+final class PostsLocalDataSource: PostsLocalDataSourceProtocol {
+
+    private let database: Database
+
+    init(database: Database) {
+        self.database = database
+    }
 
     func fetch() -> Single<[Post]> {
-        return Single.just([])
+        let request = PostEntity.sortedFetchRequest
+        return database.load(request)
+    }
+
+    func save(posts: [Post]) -> Single<Void> {
+        return database.save(posts, as: PostEntity.self)
     }
 }

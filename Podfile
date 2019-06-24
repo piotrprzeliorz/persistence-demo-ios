@@ -4,6 +4,8 @@ inhibit_all_warnings!
 
 def main_libraries
 
+  pod 'DBDebugToolkit'
+
   #Reactive
 
   pod 'RxSwift', '~> 5'

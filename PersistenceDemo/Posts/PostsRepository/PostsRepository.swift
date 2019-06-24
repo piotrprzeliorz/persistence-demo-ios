@@ -10,22 +10,26 @@ import RxSwift
 
 protocol PostsRepositoryProtocol {
 
-    init(remoteDataSource: PostsDataSource, localDataSource: PostsDataSource)
-    func fetch() -> Single<[Post]>
+    init(remoteDataSource: PostsRemoteDataSourceProtocol, localDataSource: PostsLocalDataSourceProtocol)
+    func fetch() -> Observable<Result<[Post]>>
 }
 
 final class PostsRepository: PostsRepositoryProtocol {
 
-    private let remoteDataSource: PostsDataSource
-    private let localDataSource: PostsDataSource
+    private let remoteDataSource: PostsRemoteDataSourceProtocol
+    private let localDataSource: PostsLocalDataSourceProtocol
 
-    init(remoteDataSource: PostsDataSource, localDataSource: PostsDataSource) {
+    init(remoteDataSource: PostsRemoteDataSourceProtocol, localDataSource: PostsLocalDataSourceProtocol) {
         self.remoteDataSource = remoteDataSource
         self.localDataSource = localDataSource
     }
 
-    func fetch() -> Single<[Post]> {
+    func fetch() -> Observable<Result<[Post]>> {
         return remoteDataSource.fetch()
+            .flatMap { self.localDataSource.save(posts: $0) }
+            .flatMap { self.localDataSource.fetch() }
+            .map { Result.succcess($0) }
+            .catchError { .just(Result.failure($0)) }
+            .asObservable()
     }
-
 }
