@@ -16,31 +16,44 @@ protocol PostsSceenConnectable: class {
 
 protocol PostsViewModelProtocol {
 
-    var posts: Driver<[Post]> { get }
-    var error: Driver<Error> { get }
-    
-    func refresh() -> Observable<Bool>
+    func transform(input: PostsViewModel.Input) -> PostsViewModel.Output
     func didSelect(post: Post)
 }
 
 final class PostsViewModel: PostsViewModelProtocol {
 
-    let posts: Driver<[Post]>
-    let error: Driver<Error>
+    struct Input {
+        let refresh: Observable<Void>
+    }
 
-    private let results: Observable<[Post]>
+    struct Output {
+        let posts: Driver<[Post]>
+        let error: Driver<Error>
+    }
+
     private unowned let connector: PostsSceenConnectable
+    private let postsRepository: PostsRepositoryProtocol
 
     init(postsRepository: PostsRepositoryProtocol, connector: PostsSceenConnectable) {
         self.connector = connector
-        results = postsRepository.fetch().share()
-        error = postsRepository.networkError.asDriver(onErrorJustReturn: PersistenceDemoError.unknown)
-        posts = results.asDriver(onErrorJustReturn: [])
+        self.postsRepository = postsRepository
     }
 
-    func refresh() -> Observable<Bool> {
-        return results
-            .map { _ in false }
+    func transform(input: PostsViewModel.Input) -> PostsViewModel.Output {
+        let results = postsRepository.fetch().share()
+
+        let errorInput = input.refresh
+            .flatMapLatest { results }
+            .map { $0.1 }
+            .unwrap()
+            .asDriver(onErrorJustReturn: PersistenceDemoError.unknown)
+
+        let postsInput = input.refresh
+            .flatMapLatest { results }
+            .map { $0.0 }
+            .asDriver(onErrorJustReturn: [])
+
+        return Output(posts: postsInput, error: errorInput)
     }
 
     func didSelect(post: Post) {

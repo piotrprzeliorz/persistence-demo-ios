@@ -46,7 +46,7 @@ final class CoreDataStack: Database {
         return backgorundContext.saveOrRollback(updateContextAction: update)
     }
 
-    func load<T: NSManagedObject & CDManagable & Convertible>(_ request: NSFetchRequest<T>) -> Single<[T.ResultType]> {
+    func fetch<T: NSManagedObject & CDManagable & Convertible>(_ request: NSFetchRequest<T>) -> Single<[T.ResultType]> {
         do {
             let results = try context.fetch(request)
                 .map { $0.convert() }

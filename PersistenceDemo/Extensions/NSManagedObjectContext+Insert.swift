@@ -22,7 +22,7 @@ extension NSManagedObjectContext {
                 updateContextAction()
                 do {
                     try self.save()
-                    print("Saved new data in DB 📄")
+                    print("New data in DB 📄")
                      completable(.completed)
                 } catch {
                     self.rollback()

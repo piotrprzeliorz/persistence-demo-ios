@@ -14,6 +14,11 @@
         <attribute name="body" attributeType="String" syncable="YES"/>
         <attribute name="id" attributeType="Integer 64" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="postId" attributeType="Integer 64" usesScalarValueType="YES" syncable="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <entity name="PostEntity" representedClassName=".PostEntity" syncable="YES">
         <attribute name="body" attributeType="String" syncable="YES"/>
@@ -27,8 +32,8 @@
         </uniquenessConstraints>
     </entity>
     <elements>
-        <element name="PostEntity" positionX="-63" positionY="-18" width="128" height="105"/>
         <element name="AuthorEntity" positionX="-63" positionY="9" width="128" height="90"/>
         <element name="CommentEntity" positionX="-54" positionY="27" width="128" height="90"/>
+        <element name="PostEntity" positionX="-63" positionY="-18" width="128" height="105"/>
     </elements>
 </model>

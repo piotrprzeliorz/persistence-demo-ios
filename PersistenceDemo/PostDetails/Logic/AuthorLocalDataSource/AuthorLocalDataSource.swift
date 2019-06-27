@@ -27,7 +27,7 @@ final class AuthorLocalDataSource: AuthorLocalDataSourceProtocol {
         let request = NSFetchRequest<AuthorEntity>(entityName: AuthorEntity.name)
         request.predicate = NSPredicate(format: "\(#keyPath(AuthorEntity.id)) == %d", postId)
         request.fetchLimit = 1
-        return database.load(request)
+        return database.fetch(request)
             .map({ (results)  in
                 guard let author = results.first else { throw PersistenceDemoError.noData }
                 return author

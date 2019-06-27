@@ -13,7 +13,9 @@ struct PostDetailsSceenRegistration: ContainerRegistrable {
     func register(in container: DependencyContainer) {
         
         container.register { (post: Post) in
-            PostDetailsViewModel(post: post, postDetailsRepository: try! container.resolve() as PostDetailsRepositoryProtocol) as PostDetailsViewModelProtocol
+            PostDetailsViewModel(post: post,
+                                 authorRepository: try! container.resolve() as AuthorRepositoryProtocol,
+                                 commentsRepository: try! container.resolve() as CommentsRepositoryProtocol) as PostDetailsViewModelProtocol
         }
 
         container.register { (post: Post) in

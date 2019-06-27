@@ -20,8 +20,8 @@
 		5D139BA222C384F10071D909 /* CommentEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D139BA122C384F10071D909 /* CommentEntity.swift */; };
 		5D139BA622C3874E0071D909 /* CommentsRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D139BA522C3874E0071D909 /* CommentsRemoteDataSource.swift */; };
 		5D139BA922C3899A0071D909 /* CommentsLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D139BA822C3899A0071D909 /* CommentsLocalDataSource.swift */; };
-		5D139BAC22C38FA70071D909 /* PostDetailsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D139BAB22C38FA70071D909 /* PostDetailsRepository.swift */; };
-		5D139BAF22C3A1CF0071D909 /* PostDetailsRepositoryRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D139BAE22C3A1CF0071D909 /* PostDetailsRepositoryRegistration.swift */; };
+		5D139BAC22C38FA70071D909 /* AuthorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D139BAB22C38FA70071D909 /* AuthorRepository.swift */; };
+		5D139BAF22C3A1CF0071D909 /* AuthorRepositoryRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D139BAE22C3A1CF0071D909 /* AuthorRepositoryRegistration.swift */; };
 		5D139BB222C3A6680071D909 /* PostDetailsSceenRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D139BB122C3A6680071D909 /* PostDetailsSceenRegistration.swift */; };
 		5D139BB422C3ABE50071D909 /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D139BB322C3ABE50071D909 /* PostDetailsViewController.swift */; };
 		5D139BB722C3AC2C0071D909 /* PostDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D139BB622C3AC2C0071D909 /* PostDetailsViewModel.swift */; };
@@ -63,6 +63,8 @@
 		5D938EA122BB8905005A1D94 /* AutoEquatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D938EA022BB8905005A1D94 /* AutoEquatable.swift */; };
 		5D938EA522BB8BCB005A1D94 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D938EA322BB8BCB005A1D94 /* LocalizedStrings.swift */; };
 		5D938EA622BB8BCB005A1D94 /* Equality.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D938EA422BB8BCB005A1D94 /* Equality.generated.swift */; };
+		5DB5532722C52A56001412E3 /* CommentsRepositoryRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5532622C52A56001412E3 /* CommentsRepositoryRegistration.swift */; };
+		5DB5532922C52B60001412E3 /* CommentsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5532822C52B60001412E3 /* CommentsRepository.swift */; };
 		5DC4086C22C14D5D002EFEB9 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC4086B22C14D5D002EFEB9 /* Result.swift */; };
 		5DC4086E22C15434002EFEB9 /* ObservableType+Unwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC4086D22C15434002EFEB9 /* ObservableType+Unwrap.swift */; };
 		5DE7254C22BA150000E151A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE7254B22BA150000E151A8 /* AppDelegate.swift */; };
@@ -99,8 +101,8 @@
 		5D139BA122C384F10071D909 /* CommentEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentEntity.swift; sourceTree = "<group>"; };
 		5D139BA522C3874E0071D909 /* CommentsRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsRemoteDataSource.swift; sourceTree = "<group>"; };
 		5D139BA822C3899A0071D909 /* CommentsLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsLocalDataSource.swift; sourceTree = "<group>"; };
-		5D139BAB22C38FA70071D909 /* PostDetailsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsRepository.swift; sourceTree = "<group>"; };
-		5D139BAE22C3A1CF0071D909 /* PostDetailsRepositoryRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsRepositoryRegistration.swift; sourceTree = "<group>"; };
+		5D139BAB22C38FA70071D909 /* AuthorRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorRepository.swift; sourceTree = "<group>"; };
+		5D139BAE22C3A1CF0071D909 /* AuthorRepositoryRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorRepositoryRegistration.swift; sourceTree = "<group>"; };
 		5D139BB122C3A6680071D909 /* PostDetailsSceenRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsSceenRegistration.swift; sourceTree = "<group>"; };
 		5D139BB322C3ABE50071D909 /* PostDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewController.swift; sourceTree = "<group>"; };
 		5D139BB622C3AC2C0071D909 /* PostDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewModel.swift; sourceTree = "<group>"; };
@@ -142,6 +144,8 @@
 		5D938EA022BB8905005A1D94 /* AutoEquatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoEquatable.swift; sourceTree = "<group>"; };
 		5D938EA322BB8BCB005A1D94 /* LocalizedStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
 		5D938EA422BB8BCB005A1D94 /* Equality.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Equality.generated.swift; sourceTree = "<group>"; };
+		5DB5532622C52A56001412E3 /* CommentsRepositoryRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsRepositoryRegistration.swift; sourceTree = "<group>"; };
+		5DB5532822C52B60001412E3 /* CommentsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsRepository.swift; sourceTree = "<group>"; };
 		5DC4086B22C14D5D002EFEB9 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		5DC4086D22C15434002EFEB9 /* ObservableType+Unwrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+Unwrap.swift"; sourceTree = "<group>"; };
 		5DE7254822BA150000E151A8 /* PersistenceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersistenceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -265,7 +269,8 @@
 			isa = PBXGroup;
 			children = (
 				5D139BB122C3A6680071D909 /* PostDetailsSceenRegistration.swift */,
-				5D139BAE22C3A1CF0071D909 /* PostDetailsRepositoryRegistration.swift */,
+				5D139BAE22C3A1CF0071D909 /* AuthorRepositoryRegistration.swift */,
+				5DB5532622C52A56001412E3 /* CommentsRepositoryRegistration.swift */,
 			);
 			path = Registrations;
 			sourceTree = "<group>";
@@ -273,7 +278,7 @@
 		5D139B8D22C368690071D909 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
-				5D139BAA22C38F460071D909 /* PostDetailsRepository */,
+				5D139BAA22C38F460071D909 /* Repositories */,
 				5D139BA422C387250071D909 /* CommenstRemoteDataSource */,
 				5D139BA722C389400071D909 /* CommentsLocalDataSource */,
 				5D139B9122C36AA30071D909 /* AuthorRemoteDataSource */,
@@ -341,12 +346,13 @@
 			path = CommentsLocalDataSource;
 			sourceTree = "<group>";
 		};
-		5D139BAA22C38F460071D909 /* PostDetailsRepository */ = {
+		5D139BAA22C38F460071D909 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				5D139BAB22C38FA70071D909 /* PostDetailsRepository.swift */,
+				5D139BAB22C38FA70071D909 /* AuthorRepository.swift */,
+				5DB5532822C52B60001412E3 /* CommentsRepository.swift */,
 			);
-			path = PostDetailsRepository;
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		5D139BB022C3A61C0071D909 /* VIewController */ = {
@@ -952,7 +958,7 @@
 				5D54DE3A22BD0FC600ADE9CB /* PostsRepositoryRegistration.swift in Sources */,
 				5D1F8B0222C1FC7900264099 /* UIView+Identifier.swift in Sources */,
 				5DC4086C22C14D5D002EFEB9 /* Result.swift in Sources */,
-				5D139BAC22C38FA70071D909 /* PostDetailsRepository.swift in Sources */,
+				5D139BAC22C38FA70071D909 /* AuthorRepository.swift in Sources */,
 				5D54DE2622BCEBF300ADE9CB /* Resource.swift in Sources */,
 				5D1F8B0C22C2676600264099 /* MessageView.swift in Sources */,
 				5D54DE2A22BCED4500ADE9CB /* NetworkingService.swift in Sources */,
@@ -960,9 +966,10 @@
 				5D1F8B0822C265DF00264099 /* UIViewController+MessageView.swift in Sources */,
 				5D13D6AE22C0BF1700A24D5D /* PostEntity.swift in Sources */,
 				5D938E6E22BA2746005A1D94 /* RootConnector.swift in Sources */,
+				5DB5532922C52B60001412E3 /* CommentsRepository.swift in Sources */,
 				5D54DE2F22BD036700ADE9CB /* Post.swift in Sources */,
 				5D938E8422BA56FA005A1D94 /* UIWindow+Init.swift in Sources */,
-				5D139BAF22C3A1CF0071D909 /* PostDetailsRepositoryRegistration.swift in Sources */,
+				5D139BAF22C3A1CF0071D909 /* AuthorRepositoryRegistration.swift in Sources */,
 				5D13D6B322C0E0D000A24D5D /* NSManagedObjectContext+Insert.swift in Sources */,
 				5D938E7A22BA4109005A1D94 /* PostsConnectorReigstration.swift in Sources */,
 				5D139B9022C36A810071D909 /* AuthorLocalDataSource.swift in Sources */,
@@ -973,6 +980,7 @@
 				5D54DE4222BD1A1C00ADE9CB /* Database.swift in Sources */,
 				5D938E7622BA2FC7005A1D94 /* DependencyContainer+Registration.swift in Sources */,
 				5D139B9822C36D110071D909 /* Author.swift in Sources */,
+				5DB5532722C52A56001412E3 /* CommentsRepositoryRegistration.swift in Sources */,
 				5D54DE2122BCE49D00ADE9CB /* PersistenceDemoError.swift in Sources */,
 				5D13D6B122C0D4B700A24D5D /* CDManagable.swift in Sources */,
 				5D139B9E22C370D30071D909 /* RemoteComment.swift in Sources */,

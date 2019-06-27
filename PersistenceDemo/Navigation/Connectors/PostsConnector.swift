@@ -16,7 +16,8 @@ final class PostsConnector: Connector {
         container.apply(registration: NetworkingRegistration())
         container.apply(registration: PostsRepositoryRegistration())
         container.apply(registration: PostsSceenRegistration(connector: self))
-        container.apply(registration: PostDetailsRepositoryRegistration())
+        container.apply(registration: AuthorRepositoryRegistration())
+        container.apply(registration: CommentsRepositoryRegistration())
         container.apply(registration: PostDetailsSceenRegistration())
     }
 

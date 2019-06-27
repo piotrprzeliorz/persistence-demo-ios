@@ -26,7 +26,7 @@ final class CommentsLocalDataSource: CommentsLocalDataSourceProtocol {
     func fetch(postId: Int) -> Single<[Comment]> {
         let request = CommentEntity.sortedFetchRequest
         request.predicate = NSPredicate(format: "\(#keyPath(CommentEntity.id)) == %d", postId)
-        return database.load(request)
+        return database.fetch(request)
     }
 
     func save(comments: [Comment]) -> Single<Void> {

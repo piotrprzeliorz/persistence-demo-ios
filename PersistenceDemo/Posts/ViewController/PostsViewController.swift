@@ -27,10 +27,7 @@ final class PostsViewController: UIViewController {
         super.viewDidLoad()
         setupNavigationBar()
         setupTableView()
-        bindReload()
-        bintTableView()
-        bindRefreshControl()
-        bindError()
+        bindViewModel()
     }
 
     init(viewModel: PostsViewModelProtocol) {
@@ -62,36 +59,35 @@ final class PostsViewController: UIViewController {
 
     // MARK: - Bindings
 
-    private func bindRefreshControl() {
-        refreshControl.rx.controlEvent(.valueChanged)
-            .flatMapLatest { [unowned self] in self.viewModel.refresh() }
+    private func bindViewModel() {
+        let refresh = refreshControl.rx.controlEvent(.valueChanged).asObservable()
+        let output = viewModel.transform(input: PostsViewModel.Input(refresh: refresh))
+        bindError(output.error)
+        bindReload(output.posts)
+        bintTableView(output.posts)
+        refreshControl.sendActions(for: .valueChanged)
+    }
+
+    private func bindError(_ error: Driver<Error>) {
+        error.drive(rx.showError)
+            .disposed(by: disposeBag)
+    }
+
+    private func bindReload(_ posts: Driver<[Post]>) {
+        posts.map { _ in false }
             .asDriver(onErrorJustReturn: false)
             .drive(refreshControl.rx.isRefreshing)
             .disposed(by: disposeBag)
     }
 
-    private func bindError() {
-        viewModel.error
-            .drive(rx.showError)
-            .disposed(by: disposeBag)
-    }
-
-    private func bindReload() {
-        viewModel.posts
-            .map { _ in false }
-            .asDriver(onErrorJustReturn: false)
-            .drive(refreshControl.rx.isRefreshing)
-            .disposed(by: disposeBag)
-    }
-
-    private func bintTableView() {
+    private func bintTableView(_ posts: Driver<[Post]>) {
         tableView.rx.modelSelected(Post.self)
             .subscribe(onNext: { [unowned self] (post) in
                 self.viewModel.didSelect(post: post)
             })
             .disposed(by: disposeBag)
 
-        viewModel.posts.drive(tableView.rx.items(cellIdentifier: PostTableViewCell.identifier, cellType: PostTableViewCell.self)) { _, post, cell in
+        posts.drive(tableView.rx.items(cellIdentifier: PostTableViewCell.identifier, cellType: PostTableViewCell.self)) { _, post, cell in
             cell.render(post)
             }
             .disposed(by: disposeBag)

@@ -14,7 +14,7 @@ typealias Database = ReadableDatabase & WritableDatabase
 protocol ReadableDatabase {
 
     func loadPersistentStore(completed: @escaping () -> Void)
-    func load<T: NSManagedObject & CDManagable & Convertible>(_ request: NSFetchRequest<T>) -> Single<[T.ResultType]>
+    func fetch<T: NSManagedObject & CDManagable & Convertible>(_ request: NSFetchRequest<T>) -> Single<[T.ResultType]>
 }
 
 protocol WritableDatabase {

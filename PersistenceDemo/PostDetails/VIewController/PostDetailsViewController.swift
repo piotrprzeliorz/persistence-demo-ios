@@ -7,6 +7,7 @@
 //
 
 import RxSwift
+import RxCocoa
 
 final class PostDetailsViewController: UIViewController {
 
@@ -18,7 +19,8 @@ final class PostDetailsViewController: UIViewController {
     private let bodyLabel: UILabel
     private let authorLabel: UILabel
     private let commentsNumberLabel: UILabel
-    private let activityIndicator: UIActivityIndicatorView
+    private let refreshControl: UIRefreshControl
+
     private let viewModel: PostDetailsViewModelProtocol
 
     // MARK: - Variables
@@ -33,7 +35,7 @@ final class PostDetailsViewController: UIViewController {
         self.stackView = UIStackView(frame: .zero)
         self.titleLabel = UILabel(frame: .zero)
         self.bodyLabel = UILabel(frame: .zero)
-        self.activityIndicator = UIActivityIndicatorView(style: .gray)
+        self.refreshControl = UIRefreshControl(frame: .zero)
         self.authorLabel = UILabel(frame: .zero)
         self.commentsNumberLabel = UILabel(frame: .zero)
         super.init(nibName: nil, bundle: nil)
@@ -45,21 +47,32 @@ final class PostDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationBar()
         setupScrollView()
         setupStackView()
-        bindPostDetails()
-        bindError()
+        bindViewModel()
+
     }
 
-    private func setupNavigationBar() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: activityIndicator)
-        activityIndicator.startAnimating()
+    private func bindViewModel() {
+        let refresh = refreshControl.rx.controlEvent(.valueChanged).asObservable()
+        let output = viewModel.tranform(input: PostDetailsViewModel.Input(refresh: refresh))
+        bindError(output.error)
+        bindPostDetails(body: output.body, title: output.title, authorName: output.authorName, commentsCount: output.commentsCount)
+        bindRefreshing(authorName: output.authorName, commentsCount: output.commentsCount)
+        refreshControl.sendActions(for: .valueChanged)
     }
 
     private func setupScrollView() {
+        scrollView.refreshControl = refreshControl
         view.addSubview(scrollView)
-        scrollView.edges(toMarginOf: view)
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 25),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            scrollView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            scrollView.rightAnchor.constraint(equalTo: view.rightAnchor)
+            ])
+        refreshControl.beginRefreshing()
     }
 
     private func setupStackView() {
@@ -75,32 +88,34 @@ final class PostDetailsViewController: UIViewController {
         [titleLabel, bodyLabel, authorLabel, commentsNumberLabel].forEach {
             stackView.addArrangedSubview($0)
             $0.textAlignment = .center
-            $0.backgroundColor = .red
             $0.numberOfLines = 0
         }
     }
 
-    private func bindPostDetails() {
-        viewModel.title
-            .drive(titleLabel.rx.text)
+    private func bindPostDetails(body: Driver<String>, title: Driver<String>, authorName: Driver<String>, commentsCount: Driver<String>) {
+        title.drive(titleLabel.rx.text)
             .disposed(by: disposeBag)
 
-        viewModel.body
-        .drive(bodyLabel.rx.text)
-        .disposed(by: disposeBag)
-
-        viewModel.commentsCount
-            .drive(commentsNumberLabel.rx.text)
+        body.drive(bodyLabel.rx.text)
             .disposed(by: disposeBag)
 
-        viewModel.authorName
-            .drive(authorLabel.rx.text)
+        commentsCount.drive(commentsNumberLabel.rx.text)
+            .disposed(by: disposeBag)
+
+        authorName.drive(authorLabel.rx.text)
             .disposed(by: disposeBag)
     }
 
-    private func bindError() {
-        viewModel.error
-            .delay(.seconds(1))
+    private func bindRefreshing(authorName: Driver<String>, commentsCount: Driver<String>) {
+        Observable.zip(authorName.asObservable(), commentsCount.asObservable())
+            .map { _ in false }
+            .asDriver(onErrorJustReturn: false)
+            .drive(refreshControl.rx.isRefreshing)
+            .disposed(by: disposeBag)
+    }
+
+    private func bindError(_ error: Driver<Error>) {
+        error.delay(.seconds(1))
             .drive(rx.showError)
             .disposed(by: disposeBag)
     }

@@ -26,7 +26,7 @@ final class PostsLocalDataSource: PostsLocalDataSourceProtocol {
 
     func fetch() -> Single<[Post]> {
         let request = PostEntity.sortedFetchRequest
-        return database.load(request)
+        return database.fetch(request)
     }
 
     func save(posts: [Post]) -> Single<Void> {
