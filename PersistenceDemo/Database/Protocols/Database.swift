@@ -19,6 +19,6 @@ protocol ReadableDatabase {
 
 protocol WritableDatabase {
 
-    func save<T: NSManagedObject & CDManagable>(_ objects: [T.LocalModel], as databaseType: T.Type) -> Single<Void>
+    func save<T: NSManagedObject & CDManagable>(_ objects: [T.LocalModel], as databaseType: T.Type) -> Completable
 
 }

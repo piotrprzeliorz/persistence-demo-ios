@@ -3,6 +3,10 @@
 import Foundation
 
 internal enum Localizable {
+  /// No Internet Connection
+  internal static let noInternetConnection = Localizable.tr("no_internet_connection")
+  /// N/A
+  internal static let notAvailable = Localizable.tr("not_available")
   /// Posts
   internal static let posts = Localizable.tr("posts")
 

@@ -11,6 +11,7 @@ import Dip
 struct RootConnectorRegistration: ContainerRegistrable {
 
     func register(in container: DependencyContainer) {
+
         container.register { (window: UIWindow, container: DependencyContainer) in
             RootConnector(window: window, container: container) as RootConnector
         }

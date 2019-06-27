@@ -14,9 +14,9 @@ PODS:
 DEPENDENCIES:
   - DBDebugToolkit
   - Dip (~> 7.0.1)
-  - RxCocoa (~> 5)
-  - RxSwift (~> 5)
-  - RxTest (~> 5)
+  - RxCocoa (~> 5.0.0)
+  - RxSwift (~> 5.0.0)
+  - RxTest (~> 5.0.0)
   - SwiftLint (~> 0.33.0)
 
 SPEC REPOS:
@@ -38,6 +38,6 @@ SPEC CHECKSUMS:
   RxTest: 4349afe98f564e0a9bc19063368904622d17d49a
   SwiftLint: fed9c66336e41fc74dc48a73678380718f0c8b0e
 
-PODFILE CHECKSUM: 1e769dc9a6717f213bc20f889a322374f0a9bd6e
+PODFILE CHECKSUM: 6b56b7042a7ab8c312f30d8d7d9e95012b9e2849
 
 COCOAPODS: 1.7.0

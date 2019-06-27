@@ -8,7 +8,7 @@
 
 import Dip
 
-        import DBDebugToolkit
+import DBDebugToolkit
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -19,7 +19,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - App's life cycle
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-                DBDebugToolkit.setup()
+        DBDebugToolkit.setup()
         register()
         setupRootConnector()
         return true

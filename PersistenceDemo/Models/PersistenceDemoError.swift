@@ -37,7 +37,7 @@ extension PersistenceDemoError: LocalizedError {
         case .unknown:
             return nil
         case .notConnectedToInternet:
-            return nil
+            return Localizable.noInternetConnection
         case .noResults:
             return nil
         case .noData:
@@ -45,3 +45,5 @@ extension PersistenceDemoError: LocalizedError {
         }
     }
 }
+
+extension PersistenceDemoError: AutoEquatable { }

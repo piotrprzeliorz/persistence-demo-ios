@@ -10,8 +10,15 @@ import Dip
 
 struct PostsSceenRegistration: ContainerRegistrable {
 
+    private unowned let connector: PostsSceenConnectable
+
+    init(connector: PostsSceenConnectable) {
+        self.connector = connector
+    }
+
     func register(in container: DependencyContainer) {
-        container.register { PostsViewModel(postsRepository: try! container.resolve() as PostsRepositoryProtocol) as PostsViewModelProtocol }
+        
+        container.register { PostsViewModel(postsRepository: try! container.resolve() as PostsRepositoryProtocol, connector: self.connector) as PostsViewModelProtocol }
         
         container.register { _ -> PostsViewController in
             let viewModel = try! container.resolve() as PostsViewModelProtocol

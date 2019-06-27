@@ -8,18 +8,16 @@
 
 import Dip
 
-protocol PostsConnectable {
-
-}
-
-final class PostsConnector: Connector, PostsConnectable {
+final class PostsConnector: Connector {
 
     override func setup(container: DependencyContainer) {
         super.setup(container: container)
         container.apply(registration: DatabaseRegistration())
         container.apply(registration: NetworkingRegistration())
         container.apply(registration: PostsRepositoryRegistration())
-        container.apply(registration: PostsSceenRegistration())
+        container.apply(registration: PostsSceenRegistration(connector: self))
+        container.apply(registration: PostDetailsRepositoryRegistration())
+        container.apply(registration: PostDetailsSceenRegistration())
     }
 
     override func start() {
@@ -30,6 +28,14 @@ final class PostsConnector: Connector, PostsConnectable {
 
     private func presentPostsViewController() {
         let postsViewController = try! container.resolve() as PostsViewController
+        navigationController?.pushViewController(postsViewController, animated: true)
+    }
+}
+
+extension PostsConnector: PostsSceenConnectable {
+
+    func didSelectPost(_ post: Post) {
+        let postsViewController = try! container.resolve(arguments: post) as PostDetailsViewController
         navigationController?.pushViewController(postsViewController, animated: true)
     }
 }

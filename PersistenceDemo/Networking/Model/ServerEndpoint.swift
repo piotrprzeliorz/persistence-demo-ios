@@ -11,12 +11,18 @@ import Foundation
 enum ServerEndpoint {
     
     case posts
+    case author(postId: Int)
+    case comments(postId: Int)
 
     var url: URL {
         let resourcePath: String
         switch self {
         case .posts:
             resourcePath = "posts"
+        case .author(let postId):
+             resourcePath = "users/\(postId)"
+        case .comments(let postId):
+             resourcePath = "posts/\(postId)/comments"
         }
         return Constants.Server.url.appendingPathComponent(resourcePath)
     }

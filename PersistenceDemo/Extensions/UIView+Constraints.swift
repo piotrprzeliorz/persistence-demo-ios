@@ -10,13 +10,13 @@ import UIKit
 
 extension UIView {
     
-    func edges(toMarginOf otherView: UIView) {
+    func edges(toMarginOf otherView: UIView, constant: CGFloat = 0) {
         translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            topAnchor.constraint(equalTo: otherView.topAnchor),
-            bottomAnchor.constraint(equalTo: otherView.bottomAnchor),
-            leftAnchor.constraint(equalTo: otherView.leftAnchor),
-            rightAnchor.constraint(equalTo: otherView.rightAnchor)
+            topAnchor.constraint(equalTo: otherView.topAnchor, constant: constant),
+            bottomAnchor.constraint(equalTo: otherView.bottomAnchor, constant: constant),
+            leftAnchor.constraint(equalTo: otherView.leftAnchor, constant: constant),
+            rightAnchor.constraint(equalTo: otherView.rightAnchor, constant: constant)
             ])
     }
 }

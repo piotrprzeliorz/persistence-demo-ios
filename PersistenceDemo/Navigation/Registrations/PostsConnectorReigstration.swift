@@ -11,7 +11,7 @@ import Dip
 struct PostsConnectorReigstration: ContainerRegistrable {
 
     func register(in container: DependencyContainer) {
-        container.register() { (navigationController: UINavigationController?, container: DependencyContainer) in
+        container.register { (navigationController: UINavigationController?, container: DependencyContainer) in
             PostsConnector(navigationController: navigationController, container: container) as PostsConnector
         }
     }

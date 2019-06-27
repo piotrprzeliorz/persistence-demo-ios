@@ -12,21 +12,21 @@ import RxSwift
 extension NSManagedObjectContext {
 
     func insert<T: NSManagedObject>() -> T where T: CDManagable {
-        guard let object = NSEntityDescription.insertNewObject(forEntityName: T.entityName, into: self) as? T else { fatalError("Could not cast to \(type(of: T.self))")}
+        guard let object = NSEntityDescription.insertNewObject(forEntityName: T.name, into: self) as? T else { fatalError("Could not cast to \(type(of: T.self))")}
         return object
     }
 
-    func saveOrRollback(updateContextAction: @escaping (() -> Void)) -> Single<Void> {
-        return Single.create(subscribe: { (single) -> Disposable in
+    func saveOrRollback(updateContextAction: @escaping (() -> Void)) -> Completable {
+        return Completable.create(subscribe: { (completable) -> Disposable in
             self.perform {
                 updateContextAction()
                 do {
                     try self.save()
-                    print("ZAPISANOO!!!!")
-                     single(.success(()))
+                    print("Saved new data in DB 📄")
+                     completable(.completed)
                 } catch {
                     self.rollback()
-                    single(.error(error))
+                    completable(.error(error))
                 }
             }
             return Disposables.create()

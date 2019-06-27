@@ -1,5 +1,5 @@
 //
-//  Networking.swift
+//  NetworkingService.swift
 //  PersistenceDemo
 //
 //  Created by Piotr Przeliorz on 21/06/2019.
@@ -38,6 +38,6 @@ final class NetworkingService: Networking {
             return Disposables.create {
                 task.cancel()
             }
-        }).observeOn(MainScheduler.instance)
+        })
     }
 }

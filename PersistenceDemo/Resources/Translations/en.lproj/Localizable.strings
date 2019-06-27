@@ -7,3 +7,5 @@
 */
 
 posts = "Posts";
+no_internet_connection = "No Internet Connection";
+not_available = "N/A";

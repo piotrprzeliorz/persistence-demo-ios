@@ -8,8 +8,8 @@ def main_libraries
 
   #Reactive
 
-  pod 'RxSwift', '~> 5'
-  pod 'RxCocoa', '~> 5'
+  pod 'RxSwift', '~> 5.0.0'
+  pod 'RxCocoa', '~> 5.0.0'
 
   #DI
   pod 'Dip', '~> 7.0.1'
@@ -20,7 +20,7 @@ def main_libraries
 end
 
 def test_libraries
-  pod 'RxTest', '~> 5'
+  pod 'RxTest', '~> 5.0.0'
 end
 
 target 'PersistenceDemo' do

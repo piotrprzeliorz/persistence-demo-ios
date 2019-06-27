@@ -31,5 +31,6 @@ final class PostsLocalDataSource: PostsLocalDataSourceProtocol {
 
     func save(posts: [Post]) -> Single<Void> {
         return database.save(posts, as: PostEntity.self)
+        .andThen(.just(()))
     }
 }

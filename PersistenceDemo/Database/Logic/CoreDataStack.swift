@@ -36,7 +36,7 @@ final class CoreDataStack: Database {
         context.mergePolicy = NSMergeByPropertyStoreTrumpMergePolicy
     }
 
-    func save<T: NSManagedObject & CDManagable>(_ objects: [T.LocalModel], as databaseType: T.Type) -> Single<Void> {
+    func save<T: NSManagedObject & CDManagable>(_ objects: [T.LocalModel], as databaseType: T.Type) -> Completable {
         let update = {
             objects.forEach { [unowned self] object in
                 let cdObject: T = self.backgorundContext.insert()

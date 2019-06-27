@@ -7,11 +7,12 @@
 //
 
 import RxSwift
+import RxCocoa
 
 protocol PostsRepositoryProtocol {
 
-    init(remoteDataSource: PostsRemoteDataSourceProtocol, localDataSource: PostsLocalDataSourceProtocol)
-    func fetch() -> Observable<Result<[Post]>>
+    func fetch() -> Observable<[Post]>
+    var networkError: PublishSubject<Error> { get }
 }
 
 final class PostsRepository: PostsRepositoryProtocol {
@@ -19,17 +20,24 @@ final class PostsRepository: PostsRepositoryProtocol {
     private let remoteDataSource: PostsRemoteDataSourceProtocol
     private let localDataSource: PostsLocalDataSourceProtocol
 
+    let networkError: PublishSubject<Error> = PublishSubject()
+
     init(remoteDataSource: PostsRemoteDataSourceProtocol, localDataSource: PostsLocalDataSourceProtocol) {
         self.remoteDataSource = remoteDataSource
         self.localDataSource = localDataSource
     }
 
-    func fetch() -> Observable<Result<[Post]>> {
+    func fetch() -> Observable<[Post]> {
+        let postsDataSource = localDataSource
         return remoteDataSource.fetch()
-            .flatMap { self.localDataSource.save(posts: $0) }
-            .flatMap { self.localDataSource.fetch() }
-            .map { Result.succcess($0) }
-            .catchError { .just(Result.failure($0)) }
+            .catchError { self.handleNetworkError(with: $0) }
+            .flatMap { postsDataSource.save(posts: $0) }
+            .flatMap { postsDataSource.fetch() }
             .asObservable()
+    }
+
+    private func handleNetworkError(with error: Error) -> Single<[Post]> {
+        networkError.onNext(error)
+        return localDataSource.fetch()
     }
 }

@@ -12,7 +12,7 @@ protocol CDManagable: class, NSFetchRequestResult {
 
     associatedtype LocalModel
 
-    static var entityName: String { get }
+    static var name: String { get }
     static var defaultSortDescrptiors: [NSSortDescriptor] { get }
 
     func populate(with model: LocalModel)
@@ -20,7 +20,7 @@ protocol CDManagable: class, NSFetchRequestResult {
 
 extension CDManagable where Self: NSManagedObject {
 
-    static var entityName: String {
+    static var name: String {
         return entity().name!
     }
 }
@@ -32,7 +32,7 @@ extension CDManagable {
     }
 
     static var sortedFetchRequest: NSFetchRequest<Self> {
-        let request: NSFetchRequest = NSFetchRequest<Self>(entityName: entityName)
+        let request: NSFetchRequest = NSFetchRequest<Self>(entityName: name)
         request.sortDescriptors = defaultSortDescrptiors
         return request
     }
