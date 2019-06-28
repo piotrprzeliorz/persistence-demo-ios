@@ -111,7 +111,7 @@ final class PostDetailsViewController: UIViewController {
     private func bindRefreshing(authorName: Driver<String>, commentsCount: Driver<String>) {
         Observable.combineLatest(authorName.asObservable(), commentsCount.asObservable())
             .map { _ in false }
-            .delay(.milliseconds(5), scheduler: MainScheduler.instance)
+            .delay(.milliseconds(500), scheduler: MainScheduler.instance)
             .asDriver(onErrorJustReturn: false)
             .drive(refreshControl.rx.isRefreshing)
             .disposed(by: disposeBag)

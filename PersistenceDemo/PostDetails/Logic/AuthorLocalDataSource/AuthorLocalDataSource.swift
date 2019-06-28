@@ -29,7 +29,7 @@ final class AuthorLocalDataSource: AuthorLocalDataSourceProtocol {
         request.fetchLimit = 1
         return database.fetch(request)
             .map({ (results)  in
-                guard let author = results.first else { throw PersistenceDemoError.noData }
+                guard let author = results.first else { throw PersistenceDemoError.noResults }
                 return author
             })
     }

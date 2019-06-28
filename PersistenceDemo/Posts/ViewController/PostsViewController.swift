@@ -74,7 +74,8 @@ final class PostsViewController: UIViewController {
     }
 
     private func bindReload(_ posts: Driver<[Post]>) {
-        posts.map { _ in false }
+        posts.delay(.milliseconds(250))
+            .map { _ in false }
             .asDriver(onErrorJustReturn: false)
             .drive(refreshControl.rx.isRefreshing)
             .disposed(by: disposeBag)

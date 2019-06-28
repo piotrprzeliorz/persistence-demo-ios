@@ -29,7 +29,7 @@ final class NetworkingService: Networking {
                     return single(.error(PersistenceDemoError(error: error)))
                 } else {
                     guard let payload = data.flatMap(resource.parse) else {
-                        return single(.error(PersistenceDemoError.noData))
+                        return single(.error(PersistenceDemoError.noResults))
                     }
                     return single(.success(payload))
                 }

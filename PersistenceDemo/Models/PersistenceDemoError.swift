@@ -12,7 +12,6 @@ enum PersistenceDemoError: Error {
     case unknown
     case notConnectedToInternet
     case noResults
-    case noData
 
     init(error: Error) {
         switch error {
@@ -39,8 +38,6 @@ extension PersistenceDemoError: LocalizedError {
         case .notConnectedToInternet:
             return Localizable.noInternetConnection
         case .noResults:
-            return nil
-        case .noData:
             return nil
         }
     }
