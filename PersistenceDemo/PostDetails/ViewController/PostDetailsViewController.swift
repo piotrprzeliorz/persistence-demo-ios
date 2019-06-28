@@ -51,7 +51,6 @@ final class PostDetailsViewController: UIViewController {
         setupStackView()
         bindViewModel()
         view.backgroundColor = .white
-
     }
 
     private func bindViewModel() {

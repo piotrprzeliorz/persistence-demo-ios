@@ -9,6 +9,7 @@
 import Foundation
 
 struct Resource<A> {
+    
     var urlRequest: URLRequest
     let parse: (Data) -> A?
 }

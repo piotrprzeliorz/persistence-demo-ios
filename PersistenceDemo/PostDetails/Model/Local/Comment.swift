@@ -14,3 +14,5 @@ struct Comment {
     let postId: Int
     let body: String
 }
+
+extension Comment: AutoEquatable { }

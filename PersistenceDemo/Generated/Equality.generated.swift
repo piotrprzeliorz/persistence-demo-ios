@@ -11,6 +11,15 @@
           return true
       }
   }
+  // MARK: Comment Equatable
+  extension Comment: Equatable {
+      static func ==(lhs: Comment, rhs: Comment) -> Bool {
+          guard lhs.id == rhs.id else { return false }
+          guard lhs.postId == rhs.postId else { return false }
+          guard lhs.body == rhs.body else { return false }
+          return true
+      }
+  }
   // MARK: PersistenceDemoError Equatable
   extension PersistenceDemoError: Equatable {
       static func ==(lhs: PersistenceDemoError, rhs: PersistenceDemoError) -> Bool {

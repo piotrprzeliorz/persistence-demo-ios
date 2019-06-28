@@ -62,9 +62,9 @@ final class PostDetailsViewModel: PostDetailsViewModelProtocol {
         .map {  (authorPayload, commentsPayload) in
             return [authorPayload.error, commentsPayload.error].compactMap { $0 }
         }
-        .map { $0.first}
+        .map { $0.first }
         .unwrap()
-        .asDriver(onErrorJustReturn: PersistenceDemoError.unknown)
+        .asDriver(onErrorJustReturn: PersistenceDemoError.noResults)
 
         return Output(body: .just(post.body), title: .just(post.title), authorName: authorName, commentsCount: commentCount, error: error)
     }

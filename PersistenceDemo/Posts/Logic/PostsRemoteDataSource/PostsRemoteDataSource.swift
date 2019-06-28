@@ -8,7 +8,7 @@
 
 import RxSwift
 
-protocol PostsRemoteDataSourceProtocol {
+protocol PostsRemoteDataSourceProtocol: AutoMockable {
 
     func fetch() -> Single<[Post]>
 }

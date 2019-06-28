@@ -9,7 +9,7 @@
 import RxSwift
 import RxCocoa
 
-protocol PostsSceenConnectable: class {
+protocol PostsSceenConnectable: class, AutoMockable {
 
     func didSelectPost(_ post: Post)
 }

@@ -8,7 +8,7 @@
 
 import RxSwift
 
-protocol CommentsRemoteDataSourceProtocol {
+protocol CommentsRemoteDataSourceProtocol: AutoMockable {
 
     func fetch(postId: Int) -> Single<[Comment]> 
 }

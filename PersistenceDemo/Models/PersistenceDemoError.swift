@@ -16,14 +16,18 @@ enum PersistenceDemoError: Error {
     init(error: Error) {
         switch error {
         case let error as PersistenceDemoError:
+            print("SWOJ")
             self = error
         case let `error` as NSError:
             if error.code == NSURLErrorNotConnectedToInternet {
                 self = .notConnectedToInternet
+                print("NET")
             } else {
-                fallthrough
+                 print("UNKNW Z IFA")
+                self = .unknown
             }
         default:
+            print("UNKNW Z Defultu")
             self = .unknown
         }
     }
@@ -34,11 +38,11 @@ extension PersistenceDemoError: LocalizedError {
     public var errorDescription: String? {
         switch self {
         case .unknown:
-            return nil
+            return Localizable.somethingWentWrong
         case .notConnectedToInternet:
             return Localizable.noInternetConnection
         case .noResults:
-            return nil
+            return Localizable.couldntLoadResource
         }
     }
 }

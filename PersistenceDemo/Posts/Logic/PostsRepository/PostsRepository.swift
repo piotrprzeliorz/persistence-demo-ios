@@ -9,7 +9,7 @@
 import RxSwift
 import RxCocoa
 
-protocol PostsRepositoryProtocol {
+protocol PostsRepositoryProtocol: AutoMockable {
 
     func fetch() -> Observable<(posts: [Post], error: Error?)>
 }

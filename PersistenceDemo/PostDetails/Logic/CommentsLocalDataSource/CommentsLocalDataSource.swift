@@ -9,7 +9,7 @@
 import RxSwift
 import CoreData
 
-protocol CommentsLocalDataSourceProtocol {
+protocol CommentsLocalDataSourceProtocol: AutoMockable {
 
     func fetch(postId: Int) -> Single<[Comment]>
     func save(comments: [Comment]) -> Single<Void>

@@ -65,10 +65,16 @@
 		5D938EA622BB8BCB005A1D94 /* Equality.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D938EA422BB8BCB005A1D94 /* Equality.generated.swift */; };
 		5DB5532722C52A56001412E3 /* CommentsRepositoryRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5532622C52A56001412E3 /* CommentsRepositoryRegistration.swift */; };
 		5DB5532922C52B60001412E3 /* CommentsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5532822C52B60001412E3 /* CommentsRepository.swift */; };
+		5DB5532E22C62520001412E3 /* PostsViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5532D22C62520001412E3 /* PostsViewModelTest.swift */; };
+		5DB5533022C626D6001412E3 /* AutoMockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5532F22C626D6001412E3 /* AutoMockable.swift */; };
+		5DB5533222C62957001412E3 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5533122C62957001412E3 /* AutoMockable.generated.swift */; };
+		5DB5533422C642C3001412E3 /* PostDetailsViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5533322C642C3001412E3 /* PostDetailsViewModelTest.swift */; };
+		5DB5533922C675B2001412E3 /* PostsRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5533822C675B2001412E3 /* PostsRepositoryTest.swift */; };
+		5DB5533B22C67D52001412E3 /* AuthorRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5533A22C67D52001412E3 /* AuthorRepositoryTest.swift */; };
+		5DB5533D22C68212001412E3 /* CommentsRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5533C22C68212001412E3 /* CommentsRepositoryTest.swift */; };
 		5DC4086E22C15434002EFEB9 /* ObservableType+Unwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC4086D22C15434002EFEB9 /* ObservableType+Unwrap.swift */; };
 		5DE7254C22BA150000E151A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE7254B22BA150000E151A8 /* AppDelegate.swift */; };
 		5DE7255322BA150100E151A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DE7255222BA150100E151A8 /* Assets.xcassets */; };
-		5DE7256122BA150100E151A8 /* PersistenceDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE7256022BA150100E151A8 /* PersistenceDemoTests.swift */; };
 		5DE7256C22BA1AD000E151A8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DE7256B22BA1AD000E151A8 /* LaunchScreen.xib */; };
 		5DE7256F22BA22F500E151A8 /* Connector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE7256E22BA22F500E151A8 /* Connector.swift */; };
 		9AED09C2D455A1FB19E87422 /* Pods_PersistenceDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82343C77FF6F7809DA8FD31F /* Pods_PersistenceDemoTests.framework */; };
@@ -145,13 +151,19 @@
 		5D938EA422BB8BCB005A1D94 /* Equality.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Equality.generated.swift; sourceTree = "<group>"; };
 		5DB5532622C52A56001412E3 /* CommentsRepositoryRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsRepositoryRegistration.swift; sourceTree = "<group>"; };
 		5DB5532822C52B60001412E3 /* CommentsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsRepository.swift; sourceTree = "<group>"; };
+		5DB5532D22C62520001412E3 /* PostsViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModelTest.swift; sourceTree = "<group>"; };
+		5DB5532F22C626D6001412E3 /* AutoMockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMockable.swift; sourceTree = "<group>"; };
+		5DB5533122C62957001412E3 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
+		5DB5533322C642C3001412E3 /* PostDetailsViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewModelTest.swift; sourceTree = "<group>"; };
+		5DB5533822C675B2001412E3 /* PostsRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsRepositoryTest.swift; sourceTree = "<group>"; };
+		5DB5533A22C67D52001412E3 /* AuthorRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorRepositoryTest.swift; sourceTree = "<group>"; };
+		5DB5533C22C68212001412E3 /* CommentsRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsRepositoryTest.swift; sourceTree = "<group>"; };
 		5DC4086D22C15434002EFEB9 /* ObservableType+Unwrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+Unwrap.swift"; sourceTree = "<group>"; };
 		5DE7254822BA150000E151A8 /* PersistenceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersistenceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DE7254B22BA150000E151A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DE7255222BA150100E151A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DE7255722BA150100E151A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DE7255C22BA150100E151A8 /* PersistenceDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersistenceDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5DE7256022BA150100E151A8 /* PersistenceDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceDemoTests.swift; sourceTree = "<group>"; };
 		5DE7256222BA150100E151A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DE7256B22BA1AD000E151A8 /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		5DE7256E22BA22F500E151A8 /* Connector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connector.swift; sourceTree = "<group>"; };
@@ -220,7 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				5D139B8C22C366090071D909 /* Registrations */,
-				5D139BB022C3A61C0071D909 /* VIewController */,
+				5D139BB022C3A61C0071D909 /* ViewController */,
 				5D139BB522C3AC020071D909 /* ViewModel */,
 				5D139B8D22C368690071D909 /* Logic */,
 				5D139B9422C36C9F0071D909 /* Model */,
@@ -353,12 +365,12 @@
 			path = Repositories;
 			sourceTree = "<group>";
 		};
-		5D139BB022C3A61C0071D909 /* VIewController */ = {
+		5D139BB022C3A61C0071D909 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				5D139BB322C3ABE50071D909 /* PostDetailsViewController.swift */,
 			);
-			path = VIewController;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		5D139BB522C3AC020071D909 /* ViewModel */ = {
@@ -450,11 +462,11 @@
 		5D54DE3D22BD183F00ADE9CB /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				5D13D6AF22C0D11A00A24D5D /* Entities */,
-				5D54DE4722BD1E1D00ADE9CB /* PersistenceDemoModel.xcdatamodeld */,
 				5D54DE4422BD1C7E00ADE9CB /* Registration */,
+				5D13D6AF22C0D11A00A24D5D /* Entities */,
 				5D54DE4022BD1A0B00ADE9CB /* Protocols */,
 				5D54DE4322BD1A6500ADE9CB /* Logic */,
+				5D54DE4722BD1E1D00ADE9CB /* PersistenceDemoModel.xcdatamodeld */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -502,6 +514,7 @@
 		5D938E7B22BA4745005A1D94 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				5DB5532F22C626D6001412E3 /* AutoMockable.swift */,
 				5D938E7022BA2F1F005A1D94 /* ContainerRegistrable.swift */,
 				5D938EA022BB8905005A1D94 /* AutoEquatable.swift */,
 				5D13D6B622C0EF0500A24D5D /* Convertible.swift */,
@@ -560,6 +573,7 @@
 			isa = PBXGroup;
 			children = (
 				5D938EA322BB8BCB005A1D94 /* LocalizedStrings.swift */,
+				5DB5533122C62957001412E3 /* AutoMockable.generated.swift */,
 				5D938EA422BB8BCB005A1D94 /* Equality.generated.swift */,
 			);
 			path = Generated;
@@ -617,6 +631,25 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		5DB5532A22C624EE001412E3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5DB5532D22C62520001412E3 /* PostsViewModelTest.swift */,
+				5DB5533322C642C3001412E3 /* PostDetailsViewModelTest.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5DB5533522C66D66001412E3 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				5DB5533A22C67D52001412E3 /* AuthorRepositoryTest.swift */,
+				5DB5533C22C68212001412E3 /* CommentsRepositoryTest.swift */,
+				5DB5533822C675B2001412E3 /* PostsRepositoryTest.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 		5DE7253F22BA150000E151A8 = {
 			isa = PBXGroup;
 			children = (
@@ -659,7 +692,8 @@
 		5DE7255F22BA150100E151A8 /* PersistenceDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				5DE7256022BA150100E151A8 /* PersistenceDemoTests.swift */,
+				5DB5533522C66D66001412E3 /* Repositories */,
+				5DB5532A22C624EE001412E3 /* ViewModel */,
 				5DE7256222BA150100E151A8 /* Info.plist */,
 			);
 			path = PersistenceDemoTests;
@@ -966,6 +1000,7 @@
 				5D54DE2F22BD036700ADE9CB /* Post.swift in Sources */,
 				5D938E8422BA56FA005A1D94 /* UIWindow+Init.swift in Sources */,
 				5D139BAF22C3A1CF0071D909 /* AuthorRepositoryRegistration.swift in Sources */,
+				5DB5533022C626D6001412E3 /* AutoMockable.swift in Sources */,
 				5D13D6B322C0E0D000A24D5D /* NSManagedObjectContext+Insert.swift in Sources */,
 				5D938E7A22BA4109005A1D94 /* PostsConnectorReigstration.swift in Sources */,
 				5D139B9022C36A810071D909 /* AuthorLocalDataSource.swift in Sources */,
@@ -974,6 +1009,7 @@
 				5D938E7D22BA4C29005A1D94 /* PostsViewController.swift in Sources */,
 				5D938E7822BA3F95005A1D94 /* PostsConnector.swift in Sources */,
 				5D54DE4222BD1A1C00ADE9CB /* Database.swift in Sources */,
+				5DB5533222C62957001412E3 /* AutoMockable.generated.swift in Sources */,
 				5D938E7622BA2FC7005A1D94 /* DependencyContainer+Registration.swift in Sources */,
 				5D139B9822C36D110071D909 /* Author.swift in Sources */,
 				5DB5532722C52A56001412E3 /* CommentsRepositoryRegistration.swift in Sources */,
@@ -1004,7 +1040,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DE7256122BA150100E151A8 /* PersistenceDemoTests.swift in Sources */,
+				5DB5533B22C67D52001412E3 /* AuthorRepositoryTest.swift in Sources */,
+				5DB5533D22C68212001412E3 /* CommentsRepositoryTest.swift in Sources */,
+				5DB5533922C675B2001412E3 /* PostsRepositoryTest.swift in Sources */,
+				5DB5532E22C62520001412E3 /* PostsViewModelTest.swift in Sources */,
+				5DB5533422C642C3001412E3 /* PostDetailsViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,8 @@ internal enum Localizable {
   internal static func author(_ p1: String) -> String {
     return Localizable.tr("author", p1)
   }
+  /// Couldn't load resource
+  internal static let couldntLoadResource = Localizable.tr("couldnt_load_resource")
   /// No Internet Connection
   internal static let noInternetConnection = Localizable.tr("no_internet_connection")
   /// N/A
@@ -17,6 +19,8 @@ internal enum Localizable {
   }
   /// Posts
   internal static let posts = Localizable.tr("posts")
+  /// Something went wrong
+  internal static let somethingWentWrong = Localizable.tr("something_went_wrong")
 
   private static func tr(_ key: String, _ args: CVarArg...) -> String {
     let format = NSLocalizedString(key, comment: "")

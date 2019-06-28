@@ -8,7 +8,7 @@
 
 import RxSwift
 
-protocol AuthorRepositoryProtocol {
+protocol AuthorRepositoryProtocol: AutoMockable {
 
     func fetch(authorId id: Int) -> Observable<(author: Author, error: Error?)>
 

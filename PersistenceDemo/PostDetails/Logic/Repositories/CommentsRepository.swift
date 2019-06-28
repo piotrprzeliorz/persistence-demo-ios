@@ -8,7 +8,7 @@
 
 import RxSwift
 
-protocol CommentsRepositoryProtocol {
+protocol CommentsRepositoryProtocol: AutoMockable {
     
     func fetch(postId id: Int) -> Observable<(comments: [Comment], error: Error?)>
     

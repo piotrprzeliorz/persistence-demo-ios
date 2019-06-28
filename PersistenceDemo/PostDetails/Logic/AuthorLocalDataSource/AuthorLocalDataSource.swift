@@ -9,7 +9,7 @@
 import RxSwift
 import CoreData
 
-protocol AuthorLocalDataSourceProtocol {
+protocol AuthorLocalDataSourceProtocol: AutoMockable {
 
     func fetch(postId: Int) -> Single<Author>
     func save(author: Author) -> Single<Void> 
