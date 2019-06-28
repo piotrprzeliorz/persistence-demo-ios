@@ -16,18 +16,14 @@ enum PersistenceDemoError: Error {
     init(error: Error) {
         switch error {
         case let error as PersistenceDemoError:
-            print("SWOJ")
             self = error
         case let `error` as NSError:
             if error.code == NSURLErrorNotConnectedToInternet {
                 self = .notConnectedToInternet
-                print("NET")
             } else {
-                 print("UNKNW Z IFA")
-                self = .unknown
+                fallthrough
             }
         default:
-            print("UNKNW Z Defultu")
             self = .unknown
         }
     }
