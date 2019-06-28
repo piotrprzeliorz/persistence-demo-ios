@@ -9,3 +9,5 @@
 posts = "Posts";
 no_internet_connection = "No Internet Connection";
 not_available = "N/A";
+number_of_comments = "Number of comments: %d";
+author = "Author: %@";

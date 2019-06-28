@@ -11,7 +11,7 @@ import RxCocoa
 
 protocol PostsRepositoryProtocol {
 
-    func fetch() -> Observable<([Post], Error?)>
+    func fetch() -> Observable<(posts: [Post], error: Error?)>
 }
 
 final class PostsRepository: PostsRepositoryProtocol {
@@ -24,12 +24,12 @@ final class PostsRepository: PostsRepositoryProtocol {
         self.localDataSource = localDataSource
     }
 
-    func fetch() -> Observable<([Post], Error?)> {
+    func fetch() -> Observable<(posts: [Post], error: Error?)> {
         var networkError: Error?
         let postsDataSource = localDataSource
         return remoteDataSource.fetch()
             .map { return ($0, nil) }
-            .catchError({ (error) -> PrimitiveSequence<SingleTrait, ([Post], Error?)> in
+            .catchError({ (error) -> Single<([Post], Error?)> in
                 networkError = error
                 return self.localDataSource.fetch()
                     .map { return ($0, error) }
@@ -37,6 +37,7 @@ final class PostsRepository: PostsRepositoryProtocol {
             .flatMap { postsDataSource.save(posts: $0.0) }
             .flatMap { postsDataSource.fetch() }
             .map { ($0, networkError) }
+            .do { networkError = nil }
             .asObservable()
     }
 }

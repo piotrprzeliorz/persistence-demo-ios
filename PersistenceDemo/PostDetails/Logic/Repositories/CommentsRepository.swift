@@ -10,7 +10,7 @@ import RxSwift
 
 protocol CommentsRepositoryProtocol {
     
-    func fetch(postId id: Int) -> Observable<([Comment], Error?)>
+    func fetch(postId id: Int) -> Observable<(comments: [Comment], error: Error?)>
     
 }
 
@@ -24,7 +24,7 @@ final class CommentsRepository: CommentsRepositoryProtocol {
         self.remoteDataSource = remoteDataSource
     }
     
-    func fetch(postId id: Int) -> Observable<([Comment], Error?)> {
+    func fetch(postId id: Int) -> Observable<(comments: [Comment], error: Error?)> {
         var networkError: Error?
         return remoteDataSource.fetch(postId: id)
             .map { ($0, nil) }
@@ -36,6 +36,7 @@ final class CommentsRepository: CommentsRepositoryProtocol {
             .flatMap { self.localDataSource.save(comments: $0.0) }
             .flatMap { self.localDataSource.fetch(postId: id) }
             .map { ($0, networkError) }
+            .do { networkError = nil }
             .asObservable()
     }
 }

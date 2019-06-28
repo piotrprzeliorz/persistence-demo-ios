@@ -44,13 +44,13 @@ final class PostsViewModel: PostsViewModelProtocol {
 
         let errorInput = input.refresh
             .flatMapLatest { results }
-            .map { $0.1 }
+            .map { $0.error }
             .unwrap()
             .asDriver(onErrorJustReturn: PersistenceDemoError.unknown)
 
         let postsInput = input.refresh
             .flatMapLatest { results }
-            .map { $0.0 }
+            .map { $0.posts }
             .asDriver(onErrorJustReturn: [])
 
         return Output(posts: postsInput, error: errorInput)

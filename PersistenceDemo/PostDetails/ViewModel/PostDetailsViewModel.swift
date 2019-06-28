@@ -47,18 +47,20 @@ final class PostDetailsViewModel: PostDetailsViewModelProtocol {
 
         let authorName = input.refresh
         .flatMapLatest { authorResult }
-        .map { $0.0.name }
+        .map { $0.author.name }
+        .map { Localizable.author($0) }
         .asDriver(onErrorJustReturn: Localizable.notAvailable)
 
         let commentCount = input.refresh
         .flatMapLatest { commentsResult}
-        .map { $0.0.count.description }
+        .map { $0.comments.count }
+        .map { Localizable.numberOfComments($0) }
         .asDriver(onErrorJustReturn: Localizable.notAvailable)
 
         let error: Driver<Error> = input.refresh
         .flatMap { Observable.combineLatest(authorResult, commentsResult) }
-        .map {  (author, comments) in
-            return [author.1, comments.1].compactMap { $0 }
+        .map {  (authorPayload, commentsPayload) in
+            return [authorPayload.error, commentsPayload.error].compactMap { $0 }
         }
         .map { $0.first}
         .unwrap()

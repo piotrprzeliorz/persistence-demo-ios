@@ -50,6 +50,7 @@ final class PostDetailsViewController: UIViewController {
         setupScrollView()
         setupStackView()
         bindViewModel()
+        view.backgroundColor = .white
 
     }
 
@@ -73,6 +74,7 @@ final class PostDetailsViewController: UIViewController {
             scrollView.rightAnchor.constraint(equalTo: view.rightAnchor)
             ])
         refreshControl.beginRefreshing()
+
     }
 
     private func setupStackView() {
@@ -107,8 +109,9 @@ final class PostDetailsViewController: UIViewController {
     }
 
     private func bindRefreshing(authorName: Driver<String>, commentsCount: Driver<String>) {
-        Observable.zip(authorName.asObservable(), commentsCount.asObservable())
+        Observable.combineLatest(authorName.asObservable(), commentsCount.asObservable())
             .map { _ in false }
+            .delay(.milliseconds(5), scheduler: MainScheduler.instance)
             .asDriver(onErrorJustReturn: false)
             .drive(refreshControl.rx.isRefreshing)
             .disposed(by: disposeBag)
