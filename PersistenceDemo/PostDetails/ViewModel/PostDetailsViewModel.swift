@@ -59,9 +59,7 @@ final class PostDetailsViewModel: PostDetailsViewModelProtocol {
 
         let error: Driver<Error> = input.refresh
         .flatMap { Observable.combineLatest(authorResult, commentsResult) }
-        .map {  (authorPayload, commentsPayload) in
-            return [authorPayload.error, commentsPayload.error].compactMap { $0 }
-        }
+        .map { [$0.error, $1.error].compactMap { $0 } }
         .map { $0.first }
         .unwrap()
         .asDriver(onErrorJustReturn: PersistenceDemoError.noResults)

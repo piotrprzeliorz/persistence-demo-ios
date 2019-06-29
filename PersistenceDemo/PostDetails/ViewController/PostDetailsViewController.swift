@@ -50,7 +50,6 @@ final class PostDetailsViewController: UIViewController {
         setupScrollView()
         setupStackView()
         bindViewModel()
-        view.backgroundColor = .white
     }
 
     private func bindViewModel() {
@@ -63,6 +62,7 @@ final class PostDetailsViewController: UIViewController {
     }
 
     private func setupScrollView() {
+        view.backgroundColor = .white
         scrollView.refreshControl = refreshControl
         view.addSubview(scrollView)
         scrollView.translatesAutoresizingMaskIntoConstraints = false
