@@ -7,7 +7,6 @@
 //
 
 import Dip
-import Foundation
 
 struct NetworkingRegistration: ContainerRegistrable {
 
