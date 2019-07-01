@@ -26,15 +26,16 @@ final class AuthorRepository: AuthorRepositoryProtocol {
 
     func fetch(authorId id: Int) -> Observable<(author: Author, error: Error?)> {
         var networkError: Error?
+        let authorlDataSource = localDataSource
         return remoteDataSource.fetch(postId: id)
             .map { ($0, nil) }
             .catchError({ (error) -> Single<(Author, Error?)> in
                 networkError = error
-                return self.localDataSource.fetch(postId: id)
+                return authorlDataSource.fetch(postId: id)
                     .map { ($0, error) }
             })
-            .flatMap { self.localDataSource.save(author: $0.0) }
-            .flatMap { self.localDataSource.fetch(postId: id) }
+            .flatMap { authorlDataSource.save(author: $0.0) }
+            .flatMap { authorlDataSource.fetch(postId: id) }
             .map { ($0, networkError) }
             .do { networkError = nil }
             .asObservable()

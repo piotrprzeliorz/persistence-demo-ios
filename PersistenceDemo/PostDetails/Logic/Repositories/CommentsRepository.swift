@@ -26,15 +26,16 @@ final class CommentsRepository: CommentsRepositoryProtocol {
     
     func fetch(postId id: Int) -> Observable<(comments: [Comment], error: Error?)> {
         var networkError: Error?
+        let commentDataSource = localDataSource
         return remoteDataSource.fetch(postId: id)
             .map { ($0, nil) }
             .catchError({ (error) -> Single<([Comment], Error?)> in
                 networkError = error
-                return self.localDataSource.fetch(postId: id)
+                return commentDataSource.fetch(postId: id)
                     .map { ($0, error) }
             })
-            .flatMap { self.localDataSource.save(comments: $0.0) }
-            .flatMap { self.localDataSource.fetch(postId: id) }
+            .flatMap { commentDataSource.save(comments: $0.0) }
+            .flatMap { commentDataSource.fetch(postId: id) }
             .map { ($0, networkError) }
             .do { networkError = nil }
             .asObservable()

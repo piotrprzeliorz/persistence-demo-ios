@@ -31,7 +31,7 @@ final class PostsRepository: PostsRepositoryProtocol {
             .map { return ($0, nil) }
             .catchError({ (error) -> Single<([Post], Error?)> in
                 networkError = error
-                return self.localDataSource.fetch()
+                return postsDataSource.fetch()
                     .map { return ($0, error) }
             })
             .flatMap { postsDataSource.save(posts: $0.0) }
