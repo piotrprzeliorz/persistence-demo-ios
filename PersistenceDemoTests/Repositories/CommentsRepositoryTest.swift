@@ -40,7 +40,7 @@ final class CommentsRepositoryTest: XCTestCase {
         localDataSource.fetchPostIdReturnValue = Single.just(comments)
         localDataSource.saveCommentsReturnValue = .just(())
 
-        let observer = scheduler.start {
+        let observer = scheduler.start { [unowned self] in
             self.repository.fetch(postId: 0).map { $0.comments }.observeOn(self.scheduler)
         }
 

@@ -43,7 +43,7 @@ For persistance **Core Data** with base setup - two contexts connected to same p
 - [Swiftlint](https://github.com/realm/SwiftLint) - for enforcing code style and producing warning or errors if they are not followed, there is an additional step in the build process for running  The configuration is available in .swiftlint.yml.
 - [RxSwift](https://github.com/ReactiveX/RxSwift) - for reactive programing.
 - [Dip](https://github.com/AliSoftware/Dip) - for depndecy injection.
-- [RxSwift](https://github.com/ReactiveX/RxSwift) - for testing rx code.
+- [RxTest](https://github.com/ReactiveX/RxSwift) - for testing rx code.
 - [SwiftGen](https://github.com/SwiftGen/SwiftGen) - for generating type-safe resources, there is an additional step in the build process for running  The configuration is available in swiftgen.yml.
 
 ## Materials 
