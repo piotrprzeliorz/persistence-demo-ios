@@ -14,9 +14,8 @@ Dependencies in this project are provided via Cocoapods. Please install all depe
 
 ### Overview
 
-The application is based on MVVM (model–view–viewmodel) pattern. ViewModels are structuting relationships bettwen model and user input or controllers life cycles as pipeline of transformations. Respositories are implemetned for each resource with need to be stored in persistance layer. DataSources (both local/remote) also are implemented per resource. 
-Connectors are used for handling navigaiton bettwen view controllers, it also allows to decouple them. Connectors got reference to dependecy container to allows them resoloving object from it.
-
+The application is based on MVVM (model–view–viewmodel) pattern. ViewModels are structuting relationships between model and user input or controllers life cycles as pipeline of transformations. Respositories are implemetned for each resource with need to be stored in persistance layer. DataSources (both local/remote) also are implemented per resource. 
+Connectors are used for handling navigaiton between view controllers; it also allows to decouple them. Connectors have the reference to dependecy container in order to allow them resoloving objects from it.
 
 <p align="center">
 <img width="100%" src="/Images/architecture.png">
